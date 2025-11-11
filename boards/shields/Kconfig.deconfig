@@ -1,0 +1,6 @@
+if SHIELD_EVERT
+
+config ZMK_KEYBOARD_NAME
+    default "Evert"
+
+endif

@@ -1,0 +1,2 @@
+config EVERT
+    def_bool $(shields_list_contains, Evert)
