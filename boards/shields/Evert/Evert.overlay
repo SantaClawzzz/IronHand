@@ -44,7 +44,7 @@
                       <&gpio0 29 GPIO_ACTIVE_HIGH>;
     };
 
-    my_transform: matrix_transform {
+    default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         rows = <8>;
         columns = <13>;
@@ -75,5 +75,9 @@
 };
 
 &gpio1 {
+    status = "okay";
+};
+
+zephyr_udc0: &usbd {
     status = "okay";
 };
