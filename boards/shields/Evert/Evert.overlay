@@ -8,11 +8,11 @@
         zmk,physical-layout = &my_layout;
     };
 
-    &gpio0 {
+    gpio0 {
         status = "okay";
     };
 
-    &gpio1 {
+    gpio1 {
         status = "okay";
     };
 
