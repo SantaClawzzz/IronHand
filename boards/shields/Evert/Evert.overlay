@@ -7,9 +7,6 @@
         zmk,physical-layout = &layout_60_ansi;
     };
 
-    &layout_60_ansi {
-        transform = <&default_transform>;
-    };
 
     ksca0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
@@ -79,4 +76,8 @@
 
 zephyr_udc0: &usbd {
     status = "okay";
+};
+
+&layout_60_ansi {
+    transform = <&default_transform>;
 };
