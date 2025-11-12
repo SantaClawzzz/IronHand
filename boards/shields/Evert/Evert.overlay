@@ -3,9 +3,9 @@
 
 / {
   chosen {
-        zmk,kscan = &my_kscan;
+        zmk,kscan = &ksca0;
         zmk,matrix_transform = &my_transform;
-        zmk,physical-layout = &kscan0;
+        zmk,physical-layout = &my_layout;
     };
 
     my_layout: my_layout {
