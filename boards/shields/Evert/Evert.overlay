@@ -4,12 +4,11 @@
 / {
   chosen {
         zmk,kscan = &ksca0;
-        zmk,matrix_transform = &default_transform;
-        zmk,physical-layout = &my_layout;
+        zmk,physical-layout = &layout_60_ansi;
     };
 
-    my_layout: my_layout {
-        transform = <&my_transform>;
+    &layout_60_ansi {
+        transform = <&default_transform>;
     };
 
     ksca0: kscan {
