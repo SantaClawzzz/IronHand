@@ -8,6 +8,15 @@
         zmk,physical-layout = &my_layout;
     };
 
+    &gpio0 {
+        status = "okay";
+    };
+
+    &gpio1 {
+        status = "okay";
+    };
+
+
     my_layout: my_layout {
         transform = <&my_transform>;
     };
