@@ -5,14 +5,14 @@
   chosen {
         zmk,kscan = &my_kscan;
         zmk,matrix_transform = &my_transform;
-        zmk,physical-layout = &my_layout;
+        zmk,physical-layout = &kscan0;
     };
 
     my_layout: my_layout {
         transform = <&my_transform>;
     };
 
-    my_kscan: kscan {
+    ksca0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
 
