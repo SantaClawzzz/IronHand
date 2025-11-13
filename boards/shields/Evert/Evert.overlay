@@ -7,6 +7,7 @@
   chosen {
         zmk,kscan = &ksca0;
         zmk,physical-layout = &layout_60_ansi;
+        zephyr,code-partition = &code_partition;
     };
 
 
