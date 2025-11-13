@@ -5,7 +5,7 @@
 
 / {
   chosen {
-        zmk,kscan = &ksca0;
+        zmk,kscan = &kscan0;
         zmk,physical-layout = &layout_60_ansi;
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
@@ -13,7 +13,7 @@
     };
 
 
-    ksca0: kscan {
+    kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
 
