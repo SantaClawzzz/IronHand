@@ -10,7 +10,6 @@
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
         zmk,battery = &vbatt;
-        zephyr,code-partition = &code_partition;
     };
 
     default_transform: keymap_transform_0 {
@@ -114,43 +113,6 @@
 
 zephyr_udc0: &usbd {
     status = "okay";
-};
-
-&flash0 {
-    /*
-     * For more information, see:
-     * http://docs.zephyrproject.org/latest/devices/dts/flash_partitions.html
-     */
-    partitions {
-        compatible = "fixed-partitions";
-        #address-cells = <1>;
-        #size-cells = <1>;
-
-        sd_partition: partition@0 {
-            reg = <0x00000000 0x00001000>;
-        };
-
-        code_partition: partition@1000 {
-            reg = <0x00001000 0x000d3000>;
-        };
-
-        /*
-         * The flash starting at 0x000d4000 and ending at
-         * 0x000f3fff is reserved for use by the application.
-         */
-
-        /*
-         * Storage partition will be used by FCB/LittleFS/NVS
-         * if enabled.
-         */
-        storage_partition: partition@d4000 {
-            reg = <0x000d4000 0x00020000>;
-        };
-
-        boot_partition: partition@f4000 {
-            reg = <0x000f4000 0x0000c000>;
-        };
-    };
 };
 
 &layout_60_ansi {
