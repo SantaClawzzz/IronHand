@@ -10,7 +10,6 @@
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
         zmk,battery = &vbatt;
-        zmk,underglow = &led_strip;
     };
 
     default_transform: keymap_transform_0 {
@@ -59,6 +58,12 @@
                       <&gpio0 29 GPIO_ACTIVE_HIGH>;
     };
     
+    // Node name must match original "EXT_POWER" label to preserve user settings.
+    EXT_POWER {
+        compatible = "zmk,ext-power-generic";
+        control-gpios = <&gpio0 5 GPIO_ACTIVE_LOW>;
+    };
+
     vbatt: vbatt {
         compatible = "zmk,battery-voltage-divider";
         io-channels = <&adc 2>;
@@ -93,9 +98,13 @@
 
     led_strip: ws2812@0 {
         compatible = "worldsemi,ws2812-spi";
-        reg = <0>;
+
+        /* SPI */
+        reg = <0>; /* ignored, but necessary for SPI bindings */
         spi-max-frequency = <4000000>;
-        chain-length = <12>;
+
+        /* WS2812 */
+        chain-length = <12>; /* LED strip length */
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
