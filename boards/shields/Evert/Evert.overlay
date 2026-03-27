@@ -10,6 +10,7 @@
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
         zmk,battery = &vbatt;
+        zmk,underglow = &led_strip;
     };
 
     default_transform: keymap_transform_0 {
