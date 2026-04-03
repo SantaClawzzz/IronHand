@@ -104,7 +104,7 @@
         "padstack": "warning",
         "pth_inside_courtyard": "error",
         "shorting_items": "error",
-        "silk_edge_clearance": "warning",
+        "silk_edge_clearance": "ignore",
         "silk_over_copper": "warning",
         "silk_overlap": "warning",
         "skew_out_of_range": "error",
@@ -529,10 +529,14 @@
   },
   "pcbnew": {
     "last_paths": {
+      "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "Output/",
+      "pos_files": "",
       "specctra_dsn": "",
+      "step": "",
+      "svg": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -655,7 +659,7 @@
         "uuid": "b8d579d2-27f2-42eb-81dd-aa99a1fe3fb3"
       }
     ],
-    "used_designators": "R4-6,JP1-3,#PWR14,#PWR27-31,TP1-4",
+    "used_designators": "S3-9,L103",
     "variants": []
   },
   "sheets": [
