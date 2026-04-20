@@ -23,13 +23,13 @@
 // |   0   | . | ter|   |  CTL  |  WIN  |  ALT  |            SPACE              |  ALT  |  WIN  |  CTL |  Mo(1)  | ←   |  ↓  |  →   |
 // ----------------------------------------------------------------------------------------------------------------------------------
             bindings = <
-    &kp KP_SLASH &kp KP_MINUS &kp ESC &kp F1 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F9 &kp F10 &kp F11 &kp SLCK
+    &kp KP_SLASH &kp KP_MINUS &kp ESC &kp F1 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F9 &kp F10 &kp F11
     &kp KP_N8 &kp KP_PLUS &kp GRAVE &kp N2 &kp F2 &kp N5 &kp N7 &kp N8 &kp F8 &kp MINUS &kp EQUAL &kp F12 &kp HOME
     &kp KP_N5 &kp KP_N3 &kp TAB &kp W &kp N3 &kp N6 &kp Y &kp U &kp N0 &kp P &kp RBKT &kp PSCRN &kp END
     &kp KP_N0 &kp KP_DOT &kp CAPS &kp S &kp N4 &kp R &kp H &kp J &kp O &kp SEMI &kp RSHFT &kp INS &kp RIGHT
     &kp KP_N1 &kp KP_N2 &kp LSHFT &kp Z &kp E &kp T &kp N &kp M &kp L &kp DOT &kp RCTRL &kp DEL &kp PG_DN
     &kp KP_N4 &kp KP_N6 &kp F24 &kp A &kp D &kp F &kp SPACE &kp K &kp COMMA &kp SLASH &mo 1 &kp LEFT &kp PG_UP
-    &kp KP_N7 &kp KP_N9 &kp LCTRL &kp Q &kp X &kp V &kp B &kp I &kp RALT &kp SQT &kp ENTER &kp DOWN &kp PAUSE_BREAK 
+    &kp KP_N7 &kp KP_N9 &kp LCTRL &kp Q &kp X &kp V &kp B &kp I &kp RALT &kp SQT &kp ENTER &kp DOWN 
     &kp KP_NUM &kp KP_ASTERISK &kp KP_ENTER &kp N1 &kp LALT &kp C &kp G &kp N9 &kp RWIN &kp LBKT &kp BSPC &kp UP &kp NUBS
             >;
         };
@@ -51,7 +51,7 @@
     &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
     &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
     &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
             >;
         };
     };

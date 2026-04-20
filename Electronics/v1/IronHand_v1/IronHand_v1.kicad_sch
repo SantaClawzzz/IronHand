@@ -8582,6 +8582,16 @@
 	)
 	(wire
 		(pts
+			(xy 20.32 214.63) (xy 35.56 214.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f2a8534-47a7-445b-bd87-9ecd1d5dc92e")
+	)
+	(wire
+		(pts
 			(xy 60.96 265.43) (xy 60.96 267.97)
 		)
 		(stroke
@@ -9559,16 +9569,6 @@
 			(type default)
 		)
 		(uuid "592e14ac-b96f-4367-8810-9f1166ffe8e5")
-	)
-	(wire
-		(pts
-			(xy 20.32 208.28) (xy 20.32 214.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "59463a1e-12c0-4c2f-be91-08e589a48d35")
 	)
 	(wire
 		(pts
@@ -12032,16 +12032,6 @@
 	)
 	(wire
 		(pts
-			(xy 20.32 222.25) (xy 35.56 222.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a8f834bf-2ef3-4553-849d-97e4752dc217")
-	)
-	(wire
-		(pts
 			(xy 214.63 60.96) (xy 214.63 63.5)
 		)
 		(stroke
@@ -12219,6 +12209,16 @@
 			(type default)
 		)
 		(uuid "adc4e4e8-c991-4d70-9237-f0f20b6e7ff7")
+	)
+	(wire
+		(pts
+			(xy 20.32 220.98) (xy 20.32 214.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "add0421e-b9ab-4b2e-a0ab-1e697fa739f6")
 	)
 	(wire
 		(pts
@@ -12582,16 +12582,6 @@
 	)
 	(wire
 		(pts
-			(xy 20.32 214.63) (xy 35.56 214.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bc5d2fb8-03c5-4dfa-84d3-77cb2dde264e")
-	)
-	(wire
-		(pts
 			(xy 356.87 201.93) (xy 356.87 204.47)
 		)
 		(stroke
@@ -12839,6 +12829,16 @@
 			(type default)
 		)
 		(uuid "c4f572b0-aa60-4eee-a3ef-6cb2873eff9a")
+	)
+	(wire
+		(pts
+			(xy 30.48 207.01) (xy 30.48 222.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c544eaab-0996-43df-9715-954bee61894b")
 	)
 	(wire
 		(pts
@@ -13742,16 +13742,6 @@
 	)
 	(wire
 		(pts
-			(xy 20.32 228.6) (xy 20.32 222.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e57d397f-958a-47ee-88c5-f9818777e7c6")
-	)
-	(wire
-		(pts
 			(xy 80.01 104.14) (xy 90.17 104.14)
 		)
 		(stroke
@@ -14359,6 +14349,16 @@
 			(type default)
 		)
 		(uuid "fc5fb474-0278-4e7c-92fb-c10bb25ab611")
+	)
+	(wire
+		(pts
+			(xy 30.48 222.25) (xy 35.56 222.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fddb0bec-6818-4484-8eb9-dd32b675359a")
 	)
 	(wire
 		(pts
@@ -29113,6 +29113,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 30.48 207.01 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5a91535e-d27d-4f24-96c6-eaf46e7b0f93")
+		(property "Reference" "#PWR012"
+			(at 30.48 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 30.48 201.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 30.48 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 30.48 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7fc25f90-b191-4373-b993-634a8c53370a")
+		)
+		(instances
+			(project "IronHand_v1"
+				(path "/b8d579d2-27f2-42eb-81dd-aa99a1fe3fb3"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Switch:SW_Push_45deg")
 		(at 128.27 113.03 0)
 		(unit 1)
@@ -33122,84 +33200,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 20.32 208.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7755114f-5f62-4e64-9ef8-9f9e306c5ad3")
-		(property "Reference" "#PWR012"
-			(at 20.32 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 20.32 203.2 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 20.32 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 20.32 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 20.32 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d32bf9c2-d7f0-4d7e-9feb-6935472d48e8")
-		)
-		(instances
-			(project "IronHand_v1"
-				(path "/b8d579d2-27f2-42eb-81dd-aa99a1fe3fb3"
-					(reference "#PWR012")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:D")
 		(at 120.65 173.99 90)
 		(unit 1)
@@ -37020,84 +37020,6 @@
 			(project "IronHand_v1"
 				(path "/b8d579d2-27f2-42eb-81dd-aa99a1fe3fb3"
 					(reference "D34")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 20.32 228.6 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "98d25660-cc9d-4065-93df-895df82d04d7")
-		(property "Reference" "#PWR013"
-			(at 20.32 234.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 20.32 233.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 20.32 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 20.32 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 20.32 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "cccb7c64-160a-4e1c-94cb-f48be162ea50")
-		)
-		(instances
-			(project "IronHand_v1"
-				(path "/b8d579d2-27f2-42eb-81dd-aa99a1fe3fb3"
-					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -52322,6 +52244,84 @@
 			(project "IronHand_v1"
 				(path "/b8d579d2-27f2-42eb-81dd-aa99a1fe3fb3"
 					(reference "D88")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 20.32 220.98 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fe706a59-b331-4011-a724-d12754b38b97")
+		(property "Reference" "#PWR013"
+			(at 20.32 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 20.32 226.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 20.32 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 20.32 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 20.32 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c496005e-8e7a-4ab6-b807-1650151127e4")
+		)
+		(instances
+			(project "IronHand_v1"
+				(path "/b8d579d2-27f2-42eb-81dd-aa99a1fe3fb3"
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
