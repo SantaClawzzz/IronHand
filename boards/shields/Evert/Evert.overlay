@@ -90,7 +90,7 @@
 
     mcp_reset: mcp_reset {
         gpio-hog;
-        gpios = <6 GPIO_ACTIVE_LOW>;
+        gpios = <6 GPIO_ACTIVE_HIGH>;
         output-high;
     };
 };
