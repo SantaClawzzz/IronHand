@@ -139,7 +139,7 @@
         height = <160>;
         x-offset = <26>;
         y-offset = <1>;
-        madctl = [00];
+        madctl = <0x00>;
         colmod = [05];
         caset = [00 1A 00 69];
         raset = [00 01 00 A0];
