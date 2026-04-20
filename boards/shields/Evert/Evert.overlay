@@ -12,6 +12,7 @@
         zmk,battery = &vbatt;
         zmk,underglow = &led_strip;
         zmk,display = &tft_display;
+        zephyr,display = &tft_display;
         zmk,sensors = &sensors;
     };
 
