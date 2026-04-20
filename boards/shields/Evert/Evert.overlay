@@ -87,6 +87,12 @@
 
 &gpio1 {
     status = "okay";
+
+    mcp_reset: mcp_reset {
+        gpio-hog;
+        gpios = <6 GPIO_ACTIVE_LOW>;
+        output-high;
+    };
 };
 
 &spi1 {
