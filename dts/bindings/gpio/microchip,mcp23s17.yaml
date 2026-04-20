@@ -11,10 +11,6 @@ properties:
   int-gpios:
     type: phandle-array
     description: Interrupt GPIO pin(s)
-  ngpios:
-    type: int
-    default: 16
-    description: Number of GPIO pins
 
 gpio-cells:
   - pin
