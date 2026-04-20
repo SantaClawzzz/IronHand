@@ -104,9 +104,6 @@
         gpio-controller;
         #gpio-cells = <2>;
         ngpios = <16>;
-        reset-gpios =   <&gpio1 6   GPIO_ACTIVE_LOW>;
-        int-gpios =     <&gpio1 15  GPIO_ACTIVE_LOW>,
-                        <&gpio1 13  GPIO_ACTIVE_LOW>;
     };
 };
 
