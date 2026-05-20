@@ -9,7 +9,6 @@
         zmk,physical-layout = &layout_60_ansi;
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
-        zmk,battery = &vbatt;
         zmk,underglow = &led_strip;
         zmk,display = &tft_display;
         zephyr,display = &tft_display;
@@ -69,11 +68,6 @@
         control-gpios = <&gpio0 5 GPIO_ACTIVE_LOW>;
     };
 
-    vbatt: vbatt {
-      compatible = "zmk,battery-nrf-vddhdiv5";
-      io-channels = <&adc 7>;
-    };
-
     left_encoder: encoder_left {
         compatible = "alps,ec11";
         a-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
@@ -107,10 +101,6 @@
             row-offset = <8>;
         };
     };
-};
-
-&adc {
-    status = "okay";
 };
 
 &gpiote {
