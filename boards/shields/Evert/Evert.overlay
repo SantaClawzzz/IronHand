@@ -69,10 +69,7 @@
     };
 
     vbatt: vbatt {
-        compatible = "zmk,battery-voltage-divider";
-        io-channels = <&adc 2>;
-        output-ohms = <2000000>;
-        full-ohms = <(2000000 + 806000)>;
+      compatible = "zmk,battery-nrf-vddhdiv5";
     };
 
     left_encoder: encoder_left {
@@ -175,7 +172,7 @@
         spi-max-frequency = <4000000>;
 
         /* WS2812 */
-        chain-length = <12>; /* LED strip length */
+        chain-length = <103>; /* LED strip length */
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
