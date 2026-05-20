@@ -31,6 +31,7 @@
     &kp KP_N5       &kp KP_N4       &kp LSHFT       &kp A   &kp X       &kp R   &kp SPACE   &kp K   &kp COMMA   &kp RALT    &kp NUBS    &kp LEFT    &kp PG_DN
     &kp KP_N8       &kp KP_N7       &kp LCTRL       &kp Q   &kp LALT    &kp N4  &kp B       &kp I   &kp DOT     &kp RWIN    &kp RBKT    &kp DEL     &kp PG_UP
     &kp KP_SLASH    &kp KP_NUM      &kp KP_ENTER    &kp N1  &kp LWIN    &kp F4  &kp V       &kp N8              &kp RCTRL   &kp EQUAL   &kp INS
+    &rgb_ug RGB_TOG
             >;
         };
 
@@ -52,6 +53,7 @@
     &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans 
     &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans 
     &trans &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans
+    &trans
             >;
         };
     };
