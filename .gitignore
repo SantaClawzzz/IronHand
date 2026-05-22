@@ -1,0 +1,5 @@
+# KiCad local history (has its own .git, not part of this repo)
+**/.history/
+
+# KiCad lock files
+*.lck
