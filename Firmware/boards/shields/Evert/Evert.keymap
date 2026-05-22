@@ -10,6 +10,14 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    behaviors {
+        rgb_bri_enc: rgb_bri_enc {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -33,6 +41,7 @@
     &kp KP_SLASH    &kp KP_NUM      &kp KP_ENTER    &kp N1  &kp LWIN    &kp F4  &kp V       &kp N8              &kp RCTRL   &kp EQUAL   &kp INS
     &rgb_ug RGB_TOG
             >;
+            sensor-bindings = <&rgb_bri_enc>;
         };
 
         rgb_layer {
@@ -55,6 +64,7 @@
     &trans &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans
     &trans
             >;
+            sensor-bindings = <&rgb_bri_enc>;
         };
     };
 };

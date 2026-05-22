@@ -29,6 +29,20 @@ def rgb888_to_rgb565_le(r, g, b):
 def main():
     src = os.path.join(os.path.dirname(__file__), "tarkov.jpg")
     img = Image.open(src).convert("RGB")
+    # Center-crop to target aspect ratio before resizing to avoid distortion
+    src_w, src_h = img.size
+    target_ratio = TARGET_W / TARGET_H
+    src_ratio = src_w / src_h
+    if src_ratio > target_ratio:
+        # Source is wider — crop sides
+        new_w = int(src_h * target_ratio)
+        left = (src_w - new_w) // 2
+        img = img.crop((left, 0, left + new_w, src_h))
+    else:
+        # Source is taller — crop top/bottom
+        new_h = int(src_w / target_ratio)
+        top = (src_h - new_h) // 2
+        img = img.crop((0, top, src_w, top + new_h))
     img = img.resize((TARGET_W, TARGET_H), Image.LANCZOS)
 
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)

@@ -37,8 +37,12 @@ static void tarkov_draw_event(lv_event_t *e)
             if (img_off + 1 >= (int)sizeof(tarkov_img_data)) continue;
             uint16_t raw = (uint16_t)tarkov_img_data[img_off] |
                            ((uint16_t)tarkov_img_data[img_off + 1] << 8);
-            /* RGB panel — keep channel order, just swap bytes for big-endian SPI */
-            buf[buf_idx].full = ((raw & 0xFF) << 8) | (raw >> 8);
+            /* BGR panel + big-endian SPI: swap R/B channels then swap bytes */
+            uint16_t r5 =  raw        & 0x1F;
+            uint16_t g6 = (raw >>  5) & 0x3F;
+            uint16_t b5 = (raw >> 11) & 0x1F;
+            uint16_t val = (r5 << 11) | (g6 << 5) | b5;
+            buf[buf_idx].full = ((val & 0xFF) << 8) | (val >> 8);
         }
     }
 }
