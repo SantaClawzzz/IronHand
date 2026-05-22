@@ -19,7 +19,7 @@ static void tarkov_draw_event(lv_event_t *e)
     lv_obj_get_coords(obj, &obj_coords);
 
     const lv_area_t *clip = draw_ctx->clip_area;
-    lv_coord_t buf_stride = LV_HOR_RES;
+    lv_coord_t buf_stride = lv_area_get_width(draw_ctx->buf_area);
     lv_color_t *buf = (lv_color_t *)draw_ctx->buf;
 
     lv_coord_t y0 = LV_MAX(clip->y1, obj_coords.y1);
@@ -48,11 +48,19 @@ static void tarkov_draw_event(lv_event_t *e)
     }
 }
 
+static void set_bg_transp(lv_obj_t *obj)
+{
+    lv_obj_set_style_bg_opa(obj, LV_OPA_TRANSP, LV_PART_MAIN);
+    uint32_t cnt = lv_obj_get_child_cnt(obj);
+    for (uint32_t i = 0; i < cnt; i++) {
+        set_bg_transp(lv_obj_get_child(obj, i));
+    }
+}
+
 lv_obj_t *zmk_display_status_screen(void)
 {
     lv_obj_t *screen = lv_obj_create(NULL);
 
-    /* Draw the tarkov image as the screen background before any children render */
     lv_obj_add_event_cb(screen, tarkov_draw_event, LV_EVENT_DRAW_MAIN, NULL);
     lv_obj_set_style_bg_opa(screen, LV_OPA_TRANSP, 0);
 
@@ -62,10 +70,10 @@ lv_obj_t *zmk_display_status_screen(void)
     lv_obj_align(zmk_widget_output_status_obj(&output_widget), LV_ALIGN_TOP_LEFT,   0, 0);
     lv_obj_align(zmk_widget_layer_status_obj(&layer_widget),   LV_ALIGN_BOTTOM_MID, 0, 0);
 
-    /* Widget backgrounds transparent so image shows through */
+    /* Recursively make all widget sub-objects transparent */
     uint32_t cnt = lv_obj_get_child_cnt(screen);
     for (uint32_t i = 0; i < cnt; i++) {
-        lv_obj_set_style_bg_opa(lv_obj_get_child(screen, i), LV_OPA_TRANSP, 0);
+        set_bg_transp(lv_obj_get_child(screen, i));
     }
 
     return screen;
