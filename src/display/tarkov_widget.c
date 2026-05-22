@@ -4,19 +4,42 @@
 
 #include "tarkov_img_data.h"
 
-static const lv_img_dsc_t tarkov_img_dsc = {
-    .header = {
-        .cf          = LV_IMG_CF_TRUE_COLOR,
-        .always_zero = 0,
-        .reserved    = 0,
-        .w           = TARKOV_IMG_W,
-        .h           = TARKOV_IMG_H,
-    },
-    .data_size = TARKOV_IMG_W * TARKOV_IMG_H * 2,
-    .data      = tarkov_img_data,
-};
+static void tarkov_draw_event(lv_event_t *e)
+{
+    if (lv_event_get_code(e) != LV_EVENT_DRAW_MAIN) {
+        return;
+    }
 
-static lv_style_t tarkov_bg_style;
+    lv_obj_t *obj = lv_event_get_target(e);
+    lv_draw_ctx_t *draw_ctx = lv_event_get_draw_ctx(e);
+
+    lv_area_t obj_coords;
+    lv_obj_get_coords(obj, &obj_coords);
+
+    const lv_area_t *clip = draw_ctx->clip_area;
+    lv_coord_t buf_w = lv_area_get_width(draw_ctx->buf_area);
+    lv_color_t *buf = (lv_color_t *)draw_ctx->buf;
+
+    lv_coord_t y_start = LV_MAX(clip->y1, obj_coords.y1);
+    lv_coord_t y_end   = LV_MIN(clip->y2, obj_coords.y2);
+    lv_coord_t x_start = LV_MAX(clip->x1, obj_coords.x1);
+    lv_coord_t x_end   = LV_MIN(clip->x2, obj_coords.x2);
+
+    for (lv_coord_t y = y_start; y <= y_end; y++) {
+        int img_y   = y - obj_coords.y1;
+        int buf_row = (y - draw_ctx->buf_area->y1) * buf_w;
+
+        for (lv_coord_t x = x_start; x <= x_end; x++) {
+            int img_x   = x - obj_coords.x1;
+            int img_off = (img_y * TARKOV_IMG_W + img_x) * 2;
+            int buf_idx = buf_row + (x - draw_ctx->buf_area->x1);
+
+            /* Image stored LE (lo byte first) — matches LVGL ARM framebuffer */
+            buf[buf_idx].full = (uint16_t)tarkov_img_data[img_off] |
+                                ((uint16_t)tarkov_img_data[img_off + 1] << 8);
+        }
+    }
+}
 
 static int tarkov_widget_init(void)
 {
@@ -25,14 +48,26 @@ static int tarkov_widget_init(void)
         return 0;
     }
 
+    /* Full-screen object that draws raw pixels — no image decoder needed */
+    lv_obj_t *bg = lv_obj_create(screen);
+    lv_obj_set_size(bg, TARKOV_IMG_W, TARKOV_IMG_H);
+    lv_obj_set_pos(bg, 0, 0);
+    lv_obj_set_style_bg_opa(bg, LV_OPA_TRANSP, 0);
+    lv_obj_set_style_border_width(bg, 0, 0);
+    lv_obj_set_style_pad_all(bg, 0, 0);
+    lv_obj_add_event_cb(bg, tarkov_draw_event, LV_EVENT_DRAW_MAIN, NULL);
+    lv_obj_move_to_index(bg, 0);
+
     /*
-     * Set the Tarkov image as the screen background via LVGL styles.
-     * lv_style_set_bg_img_src uses the core draw engine (lv_draw_img),
-     * not the lv_img widget, so no LV_USE_IMG Kconfig needed.
+     * ZMK's widget containers have opaque white backgrounds by default.
+     * Make them transparent so the Tarkov image shows through beneath.
+     * Start from index 1 to skip our own bg object at index 0.
      */
-    lv_style_init(&tarkov_bg_style);
-    lv_style_set_bg_img_src(&tarkov_bg_style, &tarkov_img_dsc);
-    lv_obj_add_style(screen, &tarkov_bg_style, 0);
+    uint32_t child_cnt = lv_obj_get_child_cnt(screen);
+    for (uint32_t i = 1; i < child_cnt; i++) {
+        lv_obj_t *child = lv_obj_get_child(screen, i);
+        lv_obj_set_style_bg_opa(child, LV_OPA_TRANSP, 0);
+    }
 
     return 0;
 }
