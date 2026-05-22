@@ -2,13 +2,11 @@
 #include <lvgl.h>
 #include <zmk/display/widgets/output_status.h>
 #include <zmk/display/widgets/layer_status.h>
-#include <zmk/display/widgets/battery_status.h>
 
 #include "tarkov_img_data.h"
 
 static struct zmk_widget_output_status output_widget;
 static struct zmk_widget_layer_status layer_widget;
-static struct zmk_widget_battery_status battery_widget;
 
 static void tarkov_draw_event(lv_event_t *e)
 {
@@ -56,11 +54,9 @@ lv_obj_t *zmk_display_status_screen(void)
 
     zmk_widget_output_status_init(&output_widget, screen);
     zmk_widget_layer_status_init(&layer_widget, screen);
-    zmk_widget_battery_status_init(&battery_widget, screen);
 
-    lv_obj_align(zmk_widget_output_status_obj(&output_widget),  LV_ALIGN_TOP_LEFT,   0,  0);
-    lv_obj_align(zmk_widget_battery_status_obj(&battery_widget), LV_ALIGN_TOP_RIGHT,  0,  0);
-    lv_obj_align(zmk_widget_layer_status_obj(&layer_widget),    LV_ALIGN_BOTTOM_MID, 0,  0);
+    lv_obj_align(zmk_widget_output_status_obj(&output_widget), LV_ALIGN_TOP_LEFT,   0, 0);
+    lv_obj_align(zmk_widget_layer_status_obj(&layer_widget),   LV_ALIGN_BOTTOM_MID, 0, 0);
 
     /* Widget backgrounds transparent so image shows through */
     uint32_t cnt = lv_obj_get_child_cnt(screen);
