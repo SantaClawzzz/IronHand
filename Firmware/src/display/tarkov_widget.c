@@ -37,10 +37,13 @@ static void tarkov_draw_event(lv_event_t *e)
             if (img_off + 1 >= (int)sizeof(tarkov_img_data)) continue;
             uint16_t raw = (uint16_t)tarkov_img_data[img_off] |
                            ((uint16_t)tarkov_img_data[img_off + 1] << 8);
-            /* B and R swapped — panel is BGR order despite RGB madctl setting */
-            buf[buf_idx] = lv_color_make(( raw        & 0x1F) << 3,
-                                         ((raw >>  5) & 0x3F) << 2,
-                                         ((raw >> 11) & 0x1F) << 3);
+            /* BGR panel: swap R5 and B5 channels */
+            uint16_t r5 =  raw        & 0x1F;
+            uint16_t g6 = (raw >>  5) & 0x3F;
+            uint16_t b5 = (raw >> 11) & 0x1F;
+            uint16_t val = (r5 << 11) | (g6 << 5) | b5;
+            /* ST7735R expects big-endian RGB565 over SPI; swap bytes */
+            buf[buf_idx].full = ((val & 0xFF) << 8) | (val >> 8);
         }
     }
 }
