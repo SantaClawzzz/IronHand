@@ -37,13 +37,8 @@ static void tarkov_draw_event(lv_event_t *e)
             if (img_off + 1 >= (int)sizeof(tarkov_img_data)) continue;
             uint16_t raw = (uint16_t)tarkov_img_data[img_off] |
                            ((uint16_t)tarkov_img_data[img_off + 1] << 8);
-            /* BGR panel: swap R5 and B5 channels */
-            uint16_t r5 =  raw        & 0x1F;
-            uint16_t g6 = (raw >>  5) & 0x3F;
-            uint16_t b5 = (raw >> 11) & 0x1F;
-            uint16_t val = (r5 << 11) | (g6 << 5) | b5;
-            /* ST7735R expects big-endian RGB565 over SPI; swap bytes */
-            buf[buf_idx].full = ((val & 0xFF) << 8) | (val >> 8);
+            /* RGB panel — keep channel order, just swap bytes for big-endian SPI */
+            buf[buf_idx].full = ((raw & 0xFF) << 8) | (raw >> 8);
         }
     }
 }
@@ -51,6 +46,8 @@ static void tarkov_draw_event(lv_event_t *e)
 static void set_bg_transp(lv_obj_t *obj)
 {
     lv_obj_set_style_bg_opa(obj, LV_OPA_TRANSP, LV_PART_MAIN);
+    /* bg_img_opa is separate from bg_opa — keep it visible so icon bitmaps show */
+    lv_obj_set_style_bg_img_opa(obj, LV_OPA_COVER, LV_PART_MAIN);
     uint32_t cnt = lv_obj_get_child_cnt(obj);
     for (uint32_t i = 0; i < cnt; i++) {
         set_bg_transp(lv_obj_get_child(obj, i));
