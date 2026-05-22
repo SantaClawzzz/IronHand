@@ -37,9 +37,10 @@ static void tarkov_draw_event(lv_event_t *e)
             if (img_off + 1 >= (int)sizeof(tarkov_img_data)) continue;
             uint16_t raw = (uint16_t)tarkov_img_data[img_off] |
                            ((uint16_t)tarkov_img_data[img_off + 1] << 8);
-            buf[buf_idx] = lv_color_make(((raw >> 11) & 0x1F) << 3,
+            /* B and R swapped — panel is BGR order despite RGB madctl setting */
+            buf[buf_idx] = lv_color_make(( raw        & 0x1F) << 3,
                                          ((raw >>  5) & 0x3F) << 2,
-                                         ( raw        & 0x1F) << 3);
+                                         ((raw >> 11) & 0x1F) << 3);
         }
     }
 }
