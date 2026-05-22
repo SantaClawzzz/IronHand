@@ -17,8 +17,10 @@ static void tarkov_draw_event(lv_event_t *e)
     lv_obj_get_coords(obj, &obj_coords);
 
     const lv_area_t *clip = draw_ctx->clip_area;
-    lv_coord_t buf_w  = lv_area_get_width(draw_ctx->buf_area);
-    lv_color_t *buf   = (lv_color_t *)draw_ctx->buf;
+    /* Use the full display width as stride — buf_area width can be smaller
+     * when LVGL renders in strips, which would shift every row incorrectly. */
+    lv_coord_t buf_stride = LV_HOR_RES;
+    lv_color_t *buf       = (lv_color_t *)draw_ctx->buf;
 
     lv_coord_t y0 = LV_MAX(clip->y1, obj_coords.y1);
     lv_coord_t y1 = LV_MIN(clip->y2, obj_coords.y2);
@@ -27,13 +29,18 @@ static void tarkov_draw_event(lv_event_t *e)
 
     for (lv_coord_t y = y0; y <= y1; y++) {
         int img_y   = y - obj_coords.y1;
-        int buf_row = (y - draw_ctx->buf_area->y1) * buf_w;
+        int buf_row = (y - draw_ctx->buf_area->y1) * buf_stride;
         for (lv_coord_t x = x0; x <= x1; x++) {
             int img_x   = x - obj_coords.x1;
             int img_off = (img_y * TARKOV_IMG_W + img_x) * 2;
             int buf_idx = buf_row + (x - draw_ctx->buf_area->x1);
-            buf[buf_idx].full = ((uint16_t)tarkov_img_data[img_off] << 8) |
-                                (uint16_t)tarkov_img_data[img_off + 1];
+            if (img_off + 1 >= (int)sizeof(tarkov_img_data)) continue;
+            /* Decode LE RGB565 → RGB888, let lv_color_make handle LV_COLOR_16_SWAP */
+            uint16_t raw = (uint16_t)tarkov_img_data[img_off] |
+                           ((uint16_t)tarkov_img_data[img_off + 1] << 8);
+            buf[buf_idx] = lv_color_make(((raw >> 11) & 0x1F) << 3,
+                                         ((raw >>  5) & 0x3F) << 2,
+                                         ( raw        & 0x1F) << 3);
         }
     }
 }
