@@ -1,0 +1,9 @@
+config IRONHAND_TARKOV_DISPLAY
+    bool "Show Tarkov splash image behind ZMK display widgets"
+    depends on ZMK_DISPLAY
+    default n
+
+config IRONHAND_TARKOV_DISPLAY_INIT_PRIORITY
+    int "Init priority for the Tarkov image widget (must be > ZMK display init)"
+    depends on IRONHAND_TARKOV_DISPLAY
+    default 99

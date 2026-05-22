@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(Select-Object FullName)"
+      "Bash(Select-Object FullName)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\RobinMadar\\\\OneDrive - Krakul OÜ\\\\Documents\\\\Projects\\\\IronHand\\\\zephyr\" -Recurse | Where-Object { $_.Name -match \"\\\\.\\(c|h\\)$\" } | Select-Object FullName)",
+      "PowerShell(python -c \"from PIL import Image; img = Image.open\\('\\\\\"C:/Users/RobinMadar/OneDrive - Krakul OÜ/Documents/Projects/IronHand/tarkov.jpg\\\\\"'\\); print\\(img.size, img.mode\\)\")",
+      "PowerShell(python3 -c \"from PIL import Image; img = Image.open\\('C:/Users/RobinMadar/OneDrive - Krakul OÜ/Documents/Projects/IronHand/tarkov.jpg'\\); print\\(img.size, img.mode\\)\")",
+      "PowerShell(Get-Command *)",
+      "PowerShell(& \"C:\\\\Users\\\\RobinMadar\\\\AppData\\\\Local\\\\Python\\\\bin\\\\python.exe\" -c \"from PIL import Image; img = Image.open\\('C:/Users/RobinMadar/OneDrive - Krakul OÜ/Documents/Projects/IronHand/tarkov.jpg'\\); print\\(img.size, img.mode\\)\")",
+      "PowerShell(& \"C:\\\\Users\\\\RobinMadar\\\\AppData\\\\Local\\\\Python\\\\bin\\\\python.exe\" \"C:\\\\Users\\\\RobinMadar\\\\OneDrive - Krakul OÜ\\\\Documents\\\\Projects\\\\IronHand\\\\convert_image.py\")"
     ]
   }
 }
