@@ -32,8 +32,8 @@ static void tarkov_draw_event(lv_event_t *e)
             int img_x   = x - obj_coords.x1;
             int img_off = (img_y * TARKOV_IMG_W + img_x) * 2;
             int buf_idx = buf_row + (x - draw_ctx->buf_area->x1);
-            buf[buf_idx].full = (uint16_t)tarkov_img_data[img_off] |
-                                ((uint16_t)tarkov_img_data[img_off + 1] << 8);
+            buf[buf_idx].full = ((uint16_t)tarkov_img_data[img_off] << 8) |
+                                (uint16_t)tarkov_img_data[img_off + 1];
         }
     }
 }

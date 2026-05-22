@@ -12,8 +12,8 @@ Output:
 from PIL import Image
 import os
 
-TARGET_W = 160
-TARGET_H = 80
+TARGET_W = 80
+TARGET_H = 160
 OUTPUT_PATH = os.path.join(os.path.dirname(__file__), "src", "display", "tarkov_img_data.h")
 
 
@@ -29,6 +29,8 @@ def rgb888_to_rgb565_le(r, g, b):
 def main():
     src = os.path.join(os.path.dirname(__file__), "tarkov.jpg")
     img = Image.open(src).convert("RGB")
+    # Rotate 90° CCW to compensate for the hardware 90° CW madctl rotation
+    img = img.rotate(90, expand=True)
     img = img.resize((TARGET_W, TARGET_H), Image.LANCZOS)
 
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
