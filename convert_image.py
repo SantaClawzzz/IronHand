@@ -17,14 +17,15 @@ TARGET_H = 80
 OUTPUT_PATH = os.path.join(os.path.dirname(__file__), "src", "display", "tarkov_img_data.h")
 
 
-def rgb888_to_rgb565_le(r, g, b):
+def rgb888_to_rgb565_be(r, g, b):
     r5 = (r >> 3) & 0x1F
     g6 = (g >> 2) & 0x3F
     b5 = (b >> 3) & 0x1F
     val = (r5 << 11) | (g6 << 5) | b5
-    lo = val & 0xFF
     hi = (val >> 8) & 0xFF
-    return lo, hi
+    lo = val & 0xFF
+    # ST7735R expects big-endian RGB565 over SPI
+    return hi, lo
 
 
 def main():
@@ -37,9 +38,9 @@ def main():
     pixels = list(img.getdata())
     data = []
     for r, g, b in pixels:
-        lo, hi = rgb888_to_rgb565_le(r, g, b)
-        data.append(lo)
+        hi, lo = rgb888_to_rgb565_be(r, g, b)
         data.append(hi)
+        data.append(lo)
 
     with open(OUTPUT_PATH, "w") as f:
         f.write("#pragma once\n")
