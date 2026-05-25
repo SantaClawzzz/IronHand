@@ -18,22 +18,22 @@ static void tarkov_draw_event(lv_event_t *e)
     lv_area_t obj_coords;
     lv_obj_get_coords(obj, &obj_coords);
 
-    const lv_area_t *clip = draw_ctx->clip_area;
-    lv_coord_t buf_stride = (draw_ctx->buf_area->x2 - draw_ctx->buf_area->x1) + 1;
+    const lv_area_t *buf_area = draw_ctx->buf_area;
+    lv_coord_t buf_stride = (buf_area->x2 - buf_area->x1) + 1;
     lv_color_t *buf = (lv_color_t *)draw_ctx->buf;
 
-    lv_coord_t y0 = LV_MAX(clip->y1, obj_coords.y1);
-    lv_coord_t y1 = LV_MIN(clip->y2, obj_coords.y2);
-    lv_coord_t x0 = LV_MAX(clip->x1, obj_coords.x1);
-    lv_coord_t x1 = LV_MIN(clip->x2, obj_coords.x2);
+    lv_coord_t y0 = LV_MAX(buf_area->y1, obj_coords.y1);
+    lv_coord_t y1 = LV_MIN(buf_area->y2, obj_coords.y2);
+    lv_coord_t x0 = LV_MAX(buf_area->x1, obj_coords.x1);
+    lv_coord_t x1 = LV_MIN(buf_area->x2, obj_coords.x2);
 
     for (lv_coord_t y = y0; y <= y1; y++) {
         int img_y = y - obj_coords.y1;
-        int buf_row = (y - draw_ctx->buf_area->y1) * buf_stride;
+        int buf_row = (y - buf_area->y1) * buf_stride;
         for (lv_coord_t x = x0; x <= x1; x++) {
             int img_x = x - obj_coords.x1;
             int img_off = (img_y * TARKOV_IMG_W + img_x) * 2;
-            int buf_idx = buf_row + (x - draw_ctx->buf_area->x1);
+            int buf_idx = buf_row + (x - buf_area->x1);
             if (img_off + 1 >= (int)sizeof(tarkov_img_data)) continue;
             uint16_t raw = (uint16_t)tarkov_img_data[img_off] |
                            ((uint16_t)tarkov_img_data[img_off + 1] << 8);
