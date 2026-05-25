@@ -19,25 +19,24 @@ static void tarkov_draw_event(lv_event_t *e)
     lv_area_t obj_coords;
     lv_obj_get_coords(obj, &obj_coords);
 
-    const lv_area_t *clip = draw_ctx->clip_area;
     const lv_area_t *buf_area = draw_ctx->buf_area;
+    bool buf_area_absolute = buf_area->x1 >= obj_coords.x1 && buf_area->y1 >= obj_coords.y1;
+    lv_coord_t buf_x1 = buf_area_absolute ? buf_area->x1 - obj_coords.x1 : buf_area->x1;
+    lv_coord_t buf_y1 = buf_area_absolute ? buf_area->y1 - obj_coords.y1 : buf_area->y1;
     lv_coord_t buf_w = lv_area_get_width(buf_area);
     lv_coord_t buf_h = lv_area_get_height(buf_area);
     lv_color_t *buf = (lv_color_t *)draw_ctx->buf;
 
     memset(buf, 0, buf_w * buf_h * sizeof(lv_color_t));
 
-    lv_coord_t y0 = LV_MAX(LV_MAX(buf_area->y1, clip->y1), obj_coords.y1);
-    lv_coord_t y1 = LV_MIN(LV_MIN(buf_area->y2, clip->y2), obj_coords.y2);
-    lv_coord_t x0 = LV_MAX(LV_MAX(buf_area->x1, clip->x1), obj_coords.x1);
-    lv_coord_t x1 = LV_MIN(LV_MIN(buf_area->x2, clip->x2), obj_coords.x2);
+    for (lv_coord_t row = 0; row < buf_h; row++) {
+        int img_y = buf_y1 + row;
+        if (img_y < 0 || img_y >= TARKOV_IMG_H) continue;
+        int buf_row = row * buf_w;
+        for (lv_coord_t col = 0; col < buf_w; col++) {
+            int img_x = buf_x1 + col;
+            if (img_x < 0 || img_x >= TARKOV_IMG_W) continue;
 
-    for (lv_coord_t y = y0; y <= y1; y++) {
-        int img_y = y - obj_coords.y1;
-        int buf_row = (y - buf_area->y1) * buf_w;
-        for (lv_coord_t x = x0; x <= x1; x++) {
-            int img_x = x - obj_coords.x1;
-            int col = x - buf_area->x1;
             int img_off = (img_y * TARKOV_IMG_W + img_x) * 2;
             uint16_t raw = (uint16_t)tarkov_img_data[img_off] |
                            ((uint16_t)tarkov_img_data[img_off + 1] << 8);
