@@ -148,7 +148,7 @@
         width = <160>;
         height = <80>;
         x-offset = <0>;
-        y-offset = <00>;
+        y-offset = <0>;
         madctl = <0x00>;
         colmod = <0x05>;
         caset = [00 00 00 9F];
