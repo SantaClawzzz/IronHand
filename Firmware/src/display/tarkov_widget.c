@@ -8,15 +8,37 @@
 static struct zmk_widget_output_status output_widget;
 static struct zmk_widget_layer_status layer_widget;
 
+static lv_img_dsc_t tarkov_dsc = {
+    .header = {
+        .cf = LV_IMG_CF_TRUE_COLOR,
+        .w = TARKOV_IMG_W,
+        .h = TARKOV_IMG_H,
+    },
+    .data_size = TARKOV_IMG_W * TARKOV_IMG_H * 2,
+    .data = tarkov_img_data,
+};
+
+static void set_bg_transp(lv_obj_t *obj)
+{
+    lv_obj_set_style_bg_opa(obj, LV_OPA_TRANSP, LV_PART_MAIN);
+    lv_obj_set_style_bg_img_opa(obj, LV_OPA_COVER, LV_PART_MAIN);
+    for (uint32_t i = 0; i < lv_obj_get_child_cnt(obj); i++) {
+        set_bg_transp(lv_obj_get_child(obj, i));
+    }
+}
+
 static void tarkov_draw_event(lv_event_t *e)
 {
     if (lv_event_get_code(e) != LV_EVENT_DRAW_MAIN) return;
 
-    lv_obj_t *obj = lv_event_get_target(e);
+    lv_obj_t *obj = lv_img_create(lv_event_get_target(e));
+    lv_img_set_src(obj, &tarkov_dsc);
+    lv_obj_align(obj, LV_ALIGN_CENTER, 0, 0);
     lv_draw_ctx_t *draw_ctx = lv_event_get_draw_ctx(e);
 
     lv_area_t obj_coords;
     lv_obj_get_coords(obj, &obj_coords);
+    lv_obj_set_size(obj, TARKOV_IMG_W, TARKOV_IMG_H);
 
     const lv_area_t *clip = draw_ctx->clip_area;
     lv_coord_t buf_stride = lv_area_get_width(draw_ctx->buf_area);
@@ -47,33 +69,23 @@ static void tarkov_draw_event(lv_event_t *e)
     }
 }
 
-static void set_bg_transp(lv_obj_t *obj)
-{
-    lv_obj_set_style_bg_opa(obj, LV_OPA_TRANSP, LV_PART_MAIN);
-    /* bg_img_opa is separate from bg_opa — keep it visible so icon bitmaps show */
-    lv_obj_set_style_bg_img_opa(obj, LV_OPA_COVER, LV_PART_MAIN);
-    uint32_t cnt = lv_obj_get_child_cnt(obj);
-    for (uint32_t i = 0; i < cnt; i++) {
-        set_bg_transp(lv_obj_get_child(obj, i));
-    }
-}
-
 lv_obj_t *zmk_display_status_screen(void)
 {
     lv_obj_t *screen = lv_obj_create(NULL);
-
-    lv_obj_add_event_cb(screen, tarkov_draw_event, LV_EVENT_DRAW_MAIN, NULL);
+    lv_obj_set_size(screen, TARKOV_IMG_W, TARKOV_IMG_H);
     lv_obj_set_style_bg_opa(screen, LV_OPA_TRANSP, 0);
 
+    lv_obj_t *bg = lv_img_create(screen);
+    lv_img_set_src(bg, &tarkov_dsc);
+    lv_obj_align(bg, LV_ALIGN_CENTER, 0, 0);
+    
     zmk_widget_output_status_init(&output_widget, screen);
     zmk_widget_layer_status_init(&layer_widget, screen);
 
     lv_obj_align(zmk_widget_output_status_obj(&output_widget), LV_ALIGN_TOP_LEFT,   0, 0);
     lv_obj_align(zmk_widget_layer_status_obj(&layer_widget),   LV_ALIGN_BOTTOM_MID, 0, 0);
 
-    /* Recursively make all widget sub-objects transparent */
-    uint32_t cnt = lv_obj_get_child_cnt(screen);
-    for (uint32_t i = 0; i < cnt; i++) {
+    for (uint32_t i = 0; i < lv_obj_get_child_cnt(screen); i++) {
         set_bg_transp(lv_obj_get_child(screen, i));
     }
 
