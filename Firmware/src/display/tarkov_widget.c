@@ -20,32 +20,16 @@ static void tarkov_draw_event(lv_event_t *e)
     lv_obj_get_coords(obj, &obj_coords);
 
     const lv_area_t *buf_area = draw_ctx->buf_area;
-    bool buf_area_absolute = buf_area->x1 >= obj_coords.x1 && buf_area->y1 >= obj_coords.y1;
-    lv_coord_t buf_x1 = buf_area_absolute ? buf_area->x1 - obj_coords.x1 : buf_area->x1;
-    lv_coord_t buf_y1 = buf_area_absolute ? buf_area->y1 - obj_coords.y1 : buf_area->y1;
     lv_coord_t buf_w = lv_area_get_width(buf_area);
     lv_coord_t buf_h = lv_area_get_height(buf_area);
     lv_color_t *buf = (lv_color_t *)draw_ctx->buf;
-
-    memset(buf, 0, buf_w * buf_h * sizeof(lv_color_t));
+    lv_color_t fill_color;
+    fill_color.full = 0xF800; /* solid red fill */
 
     for (lv_coord_t row = 0; row < buf_h; row++) {
-        int img_y = buf_y1 + row;
-        if (img_y < 0 || img_y >= TARKOV_IMG_H) continue;
         int buf_row = row * buf_w;
         for (lv_coord_t col = 0; col < buf_w; col++) {
-            int img_x = buf_x1 + col;
-            if (img_x < 0 || img_x >= TARKOV_IMG_W) continue;
-
-            int img_off = (img_y * TARKOV_IMG_W + img_x) * 2;
-            uint16_t raw = (uint16_t)tarkov_img_data[img_off] |
-                           ((uint16_t)tarkov_img_data[img_off + 1] << 8);
-            /* BGR panel + big-endian SPI: swap R/B channels then swap bytes */
-            uint16_t r5 =  raw        & 0x1F;
-            uint16_t g6 = (raw >>  5) & 0x3F;
-            uint16_t b5 = (raw >> 11) & 0x1F;
-            uint16_t val = (r5 << 11) | (g6 << 5) | b5;
-            buf[buf_row + col].full = ((val & 0xFF) << 8) | (val >> 8);
+            buf[buf_row + col] = fill_color;
         }
     }
 }
@@ -74,14 +58,7 @@ lv_obj_t *zmk_display_status_screen(void)
     lv_obj_add_event_cb(bg_obj, tarkov_draw_event, LV_EVENT_DRAW_MAIN, NULL);
     lv_obj_move_background(bg_obj);
 
-    zmk_widget_output_status_init(&output_widget, screen);
-    zmk_widget_layer_status_init(&layer_widget, screen);
-
-    lv_obj_align(zmk_widget_output_status_obj(&output_widget), LV_ALIGN_TOP_LEFT,   0, 0);
-    lv_obj_align(zmk_widget_layer_status_obj(&layer_widget),   LV_ALIGN_BOTTOM_MID, 0, 0);
-
-    set_bg_transp(zmk_widget_output_status_obj(&output_widget));
-    set_bg_transp(zmk_widget_layer_status_obj(&layer_widget));
+    /* No status widgets in this test build; just draw a solid background */
 
     return screen;
 }
