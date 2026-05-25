@@ -147,8 +147,8 @@
         cmd-data-gpios = <&gpio0 29 GPIO_ACTIVE_LOW>;
         width = <160>;
         height = <80>;
-        x-offset = <1>;
-        y-offset = <26>;
+        x-offset = <0>;
+        y-offset = <0>;
         madctl = <0x60>;
         colmod = <0x05>;
         caset = [00 01 00 A0];
