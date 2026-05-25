@@ -148,11 +148,11 @@
         width = <160>;
         height = <80>;
         x-offset = <0>;
-        y-offset = <20>;
-        madctl = <0x60>;
+        y-offset = <00>;
+        madctl = <0x00>;
         colmod = <0x05>;
-        caset = [00 01 00 A0];
-        raset = [00 1A 00 69];
+        caset = [00 00 00 9F];
+        raset = [00 00 00 4F];
         frmctr1 = [01 2C 2D];
         frmctr2 = [01 2C 2D];
         frmctr3 = [01 2C 2D 01 2C 2D];
