@@ -5,6 +5,19 @@
 #include "tarkov_img_data.h"
 
 static lv_obj_t *tarkov_screen;
+static lv_style_t tarkov_bg_style;
+static bool tarkov_bg_style_initialized;
+
+static void set_children_transparent(lv_obj_t *obj)
+{
+    uint32_t child_count = lv_obj_get_child_cnt(obj);
+    for (uint32_t i = 0; i < child_count; i++) {
+        lv_obj_t *child = lv_obj_get_child(obj, i);
+        lv_obj_set_style_bg_opa(child, LV_OPA_TRANSP, LV_PART_MAIN);
+        lv_obj_set_style_border_opa(child, LV_OPA_TRANSP, LV_PART_MAIN);
+        set_children_transparent(child);
+    }
+}
 
 static void tarkov_draw_event(lv_event_t *e)
 {
@@ -44,11 +57,14 @@ static void tarkov_draw_event(lv_event_t *e)
 
             uint16_t raw = (uint16_t)tarkov_img_data[img_off] |
                            ((uint16_t)tarkov_img_data[img_off + 1] << 8);
-#if LV_COLOR_DEPTH == 16 && defined(LV_COLOR_16_SWAP) && LV_COLOR_16_SWAP
-            buf[buf_idx].full = (raw >> 8) | (raw << 8);
-#else
-            buf[buf_idx].full = raw;
-#endif
+            uint16_t r5 = raw & 0x1F;
+            uint16_t g6 = (raw >> 5) & 0x3F;
+            uint16_t b5 = (raw >> 11) & 0x1F;
+            lv_color_t px = lv_color_make(
+                (uint8_t)((r5 * 255u) / 31u),
+                (uint8_t)((g6 * 255u) / 63u),
+                (uint8_t)((b5 * 255u) / 31u));
+            buf[buf_idx] = px;
         }
     }
 }
@@ -66,14 +82,24 @@ static void tarkov_apply(struct k_work *work)
         return;
     }
 
+    if (!tarkov_bg_style_initialized) {
+        lv_style_init(&tarkov_bg_style);
+        lv_style_set_bg_img_src(&tarkov_bg_style, &tarkov_img_dsc);
+        lv_style_set_bg_img_opa(&tarkov_bg_style, LV_OPA_COVER);
+        lv_style_set_bg_img_tiled(&tarkov_bg_style, false);
+        lv_style_set_bg_opa(&tarkov_bg_style, LV_OPA_COVER);
+        tarkov_bg_style_initialized = true;
+    }
+
     if (screen != tarkov_screen) {
         tarkov_screen = screen;
         lv_obj_add_event_cb(screen, tarkov_draw_event, LV_EVENT_DRAW_MAIN, NULL);
         lv_obj_add_event_cb(screen, tarkov_draw_event, LV_EVENT_DRAW_POST, NULL);
     }
 
-    lv_obj_set_style_bg_opa(screen, LV_OPA_TRANSP, LV_PART_MAIN);
+    lv_obj_add_style(screen, &tarkov_bg_style, LV_PART_MAIN);
     lv_obj_set_style_border_opa(screen, LV_OPA_TRANSP, LV_PART_MAIN);
+    set_children_transparent(screen);
     lv_obj_invalidate(screen);
     k_work_schedule(&tarkov_work, K_MSEC(1000));
 }
