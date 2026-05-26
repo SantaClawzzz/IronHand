@@ -1,6 +1,5 @@
 #include <zephyr/kernel.h>
 #include <lvgl.h>
-#include <zmk/display/theme.h>
 #include <zmk/display/widgets/output_status.h>
 #include <zmk/display/widgets/layer_status.h>
 
@@ -37,14 +36,13 @@ lv_obj_t *zmk_display_status_screen(void)
 {
     lv_obj_t *screen = lv_obj_create(NULL);
 
-    zmk_display_theme_init(screen);
     lv_obj_add_event_cb(screen, tarkov_draw_event, LV_EVENT_DRAW_MAIN, NULL);
     lv_obj_set_style_bg_opa(screen, LV_OPA_TRANSP, 0);
 
     zmk_widget_output_status_init(&output_widget, screen);
     zmk_widget_layer_status_init(&layer_widget, screen);
 
-    const lv_font_t *font = lv_theme_get_font_small(lv_scr_act());
+    const lv_font_t *font = lv_theme_get_font_small(screen);
     if (font) {
         lv_obj_set_style_text_font(zmk_widget_output_status_obj(&output_widget),
                                    font,
