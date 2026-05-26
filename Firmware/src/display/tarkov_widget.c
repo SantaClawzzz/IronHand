@@ -47,18 +47,6 @@ static void tarkov_draw_event(lv_event_t *e)
     }
 }
 
-static void set_bg_transp(lv_obj_t *obj)
-{
-    lv_obj_set_style_bg_opa(obj, LV_OPA_TRANSP, LV_PART_MAIN);
-    lv_obj_set_style_border_opa(obj, LV_OPA_TRANSP, LV_PART_MAIN);
-    lv_obj_set_style_bg_opa(obj, LV_OPA_TRANSP, LV_PART_ITEMS);
-    lv_obj_set_style_border_opa(obj, LV_OPA_TRANSP, LV_PART_ITEMS);
-    uint32_t cnt = lv_obj_get_child_cnt(obj);
-    for (uint32_t i = 0; i < cnt; i++) {
-        set_bg_transp(lv_obj_get_child(obj, i));
-    }
-}
-
 lv_obj_t *zmk_display_status_screen(void)
 {
     lv_obj_t *screen = lv_obj_create(NULL);
@@ -71,12 +59,6 @@ lv_obj_t *zmk_display_status_screen(void)
 
     lv_obj_align(zmk_widget_output_status_obj(&output_widget), LV_ALIGN_TOP_LEFT,   0, 0);
     lv_obj_align(zmk_widget_layer_status_obj(&layer_widget),   LV_ALIGN_BOTTOM_MID, 0, 0);
-
-    /* Recursively make all widget sub-objects transparent */
-    uint32_t cnt = lv_obj_get_child_cnt(screen);
-    for (uint32_t i = 0; i < cnt; i++) {
-        set_bg_transp(lv_obj_get_child(screen, i));
-    }
 
     return screen;
 }
