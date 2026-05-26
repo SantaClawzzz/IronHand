@@ -57,6 +57,13 @@ lv_obj_t *zmk_display_status_screen(void)
     zmk_widget_output_status_init(&output_widget, screen);
     zmk_widget_layer_status_init(&layer_widget, screen);
 
+    lv_obj_set_style_text_font(zmk_widget_output_status_obj(&output_widget),
+                               lv_theme_get_font_small(screen),
+                               LV_PART_MAIN);
+    lv_obj_set_style_text_font(zmk_widget_layer_status_obj(&layer_widget),
+                               lv_theme_get_font_small(screen),
+                               LV_PART_MAIN);
+
     lv_obj_align(zmk_widget_output_status_obj(&output_widget), LV_ALIGN_TOP_LEFT,   0, 0);
     lv_obj_align(zmk_widget_layer_status_obj(&layer_widget),   LV_ALIGN_BOTTOM_MID, 0, 0);
 
