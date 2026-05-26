@@ -53,6 +53,8 @@ static void tarkov_draw_event(lv_event_t *e)
     }
 }
 
+static K_WORK_DELAYABLE_DEFINE(tarkov_work, tarkov_apply);
+
 static void tarkov_apply(struct k_work *work)
 {
     ARG_UNUSED(work);
@@ -74,8 +76,6 @@ static void tarkov_apply(struct k_work *work)
     lv_obj_invalidate(screen);
     k_work_schedule(&tarkov_work, K_MSEC(1000));
 }
-
-static K_WORK_DELAYABLE_DEFINE(tarkov_work, tarkov_apply);
 
 static int tarkov_widget_init(void)
 {
