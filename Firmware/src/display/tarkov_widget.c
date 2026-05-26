@@ -12,37 +12,22 @@ static void tarkov_draw_event(lv_event_t *e)
 {
     if (lv_event_get_code(e) != LV_EVENT_DRAW_MAIN) return;
 
-    lv_obj_t *obj = lv_event_get_target(e);
     lv_draw_ctx_t *draw_ctx = lv_event_get_draw_ctx(e);
-
-    lv_area_t obj_coords;
-    lv_obj_get_coords(obj, &obj_coords);
-
-    const lv_area_t *clip = draw_ctx->clip_area;
     lv_coord_t buf_stride = lv_area_get_width(draw_ctx->buf_area);
     lv_color_t *buf = (lv_color_t *)draw_ctx->buf;
+    lv_color_t white = LV_COLOR_WHITE;
 
-    lv_coord_t y0 = LV_MAX(clip->y1, obj_coords.y1);
-    lv_coord_t y1 = LV_MIN(clip->y2, obj_coords.y2);
-    lv_coord_t x0 = LV_MAX(clip->x1, obj_coords.x1);
-    lv_coord_t x1 = LV_MIN(clip->x2, obj_coords.x2);
+    const lv_area_t *clip = draw_ctx->clip_area;
+    lv_coord_t y0 = clip->y1;
+    lv_coord_t y1 = clip->y2;
+    lv_coord_t x0 = clip->x1;
+    lv_coord_t x1 = clip->x2;
 
     for (lv_coord_t y = y0; y <= y1; y++) {
-        int img_y = y - obj_coords.y1;
         int buf_row = (y - draw_ctx->buf_area->y1) * buf_stride;
         for (lv_coord_t x = x0; x <= x1; x++) {
-            int img_x = x - obj_coords.x1;
-            int img_off = (img_y * TARKOV_IMG_W + img_x) * 2;
             int buf_idx = buf_row + (x - draw_ctx->buf_area->x1);
-            if (img_off + 1 >= (int)sizeof(tarkov_img_data)) continue;
-            uint16_t raw = (uint16_t)tarkov_img_data[img_off] |
-                           ((uint16_t)tarkov_img_data[img_off + 1] << 8);
-            /* BGR panel + big-endian SPI: swap R/B channels then swap bytes */
-            uint16_t r5 =  raw        & 0x1F;
-            uint16_t g6 = (raw >>  5) & 0x3F;
-            uint16_t b5 = (raw >> 11) & 0x1F;
-            uint16_t val = (r5 << 11) | (g6 << 5) | b5;
-            buf[buf_idx].full = ((val & 0xFF) << 8) | (val >> 8);
+            buf[buf_idx] = white;
         }
     }
 }
