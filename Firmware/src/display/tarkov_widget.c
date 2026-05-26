@@ -18,13 +18,16 @@ static const lv_img_dsc_t tarkov_img_dsc = {
 
 static lv_style_t tarkov_bg_style;
 
-static void set_children_transparent(lv_obj_t *screen)
+static void set_children_transparent(lv_obj_t *obj)
 {
-    uint32_t child_count = lv_obj_get_child_cnt(screen);
+    uint32_t child_count = lv_obj_get_child_cnt(obj);
     for (uint32_t i = 0; i < child_count; i++) {
-        lv_obj_t *child = lv_obj_get_child(screen, i);
+        lv_obj_t *child = lv_obj_get_child(obj, i);
         lv_obj_set_style_bg_opa(child, LV_OPA_TRANSP, LV_PART_MAIN);
         lv_obj_set_style_border_opa(child, LV_OPA_TRANSP, LV_PART_MAIN);
+        lv_obj_set_style_bg_opa(child, LV_OPA_TRANSP, LV_PART_ITEMS);
+        lv_obj_set_style_border_opa(child, LV_OPA_TRANSP, LV_PART_ITEMS);
+        set_children_transparent(child);
     }
 }
 
