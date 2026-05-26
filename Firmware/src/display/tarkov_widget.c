@@ -26,11 +26,6 @@ static void tarkov_draw_event(lv_event_t *e)
     lv_coord_t y1 = LV_MIN(clip->y2, obj_coords.y2);
     lv_coord_t x0 = LV_MAX(clip->x1, obj_coords.x1);
     lv_coord_t x1 = LV_MIN(clip->x2, obj_coords.x2);
-}
-
-static void tarkov_apply(struct k_work *work);
-
-static K_WORK_DELAYABLE_DEFINE(tarkov_work, tarkov_apply);
 
     for (lv_coord_t y = y0; y <= y1; y++) {
         int img_y = y - obj_coords.y1;
@@ -58,8 +53,6 @@ static K_WORK_DELAYABLE_DEFINE(tarkov_work, tarkov_apply);
     }
 }
 
-static K_WORK_DELAYABLE_DEFINE(tarkov_work, tarkov_apply);
-
 static void tarkov_apply(struct k_work *work)
 {
     ARG_UNUSED(work);
@@ -81,6 +74,8 @@ static void tarkov_apply(struct k_work *work)
     lv_obj_invalidate(screen);
     k_work_schedule(&tarkov_work, K_MSEC(1000));
 }
+
+static K_WORK_DELAYABLE_DEFINE(tarkov_work, tarkov_apply);
 
 static int tarkov_widget_init(void)
 {
