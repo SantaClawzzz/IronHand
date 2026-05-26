@@ -37,25 +37,14 @@ static void tarkov_draw_event(lv_event_t *e)
 
             uint16_t raw = (uint16_t)tarkov_img_data[img_off] |
                            ((uint16_t)tarkov_img_data[img_off + 1] << 8);
+#if LV_COLOR_DEPTH == 16 && defined(LV_COLOR_16_SWAP) && LV_COLOR_16_SWAP
+            buf[buf_idx].full = (raw >> 8) | (raw << 8);
+#else
             buf[buf_idx].full = raw;
+#endif
         }
     }
 }
-
-static void set_children_transparent(lv_obj_t *obj)
-{
-    uint32_t child_count = lv_obj_get_child_cnt(obj);
-    for (uint32_t i = 0; i < child_count; i++) {
-        lv_obj_t *child = lv_obj_get_child(obj, i);
-        lv_obj_set_style_bg_opa(child, LV_OPA_TRANSP, LV_PART_MAIN);
-        lv_obj_set_style_border_opa(child, LV_OPA_TRANSP, LV_PART_MAIN);
-        lv_obj_set_style_bg_opa(child, LV_OPA_TRANSP, LV_PART_ITEMS);
-        lv_obj_set_style_border_opa(child, LV_OPA_TRANSP, LV_PART_ITEMS);
-        set_children_transparent(child);
-    }
-}
-
-static lv_obj_t *tarkov_bg_obj;
 
 static void tarkov_apply(struct k_work *work)
 {
@@ -66,20 +55,9 @@ static void tarkov_apply(struct k_work *work)
         return;
     }
 
-    if (!tarkov_bg_obj) {
-        tarkov_bg_obj = lv_obj_create(screen);
-        lv_obj_remove_style_all(tarkov_bg_obj);
-        lv_obj_set_size(tarkov_bg_obj, lv_obj_get_width(screen), lv_obj_get_height(screen));
-        lv_obj_set_pos(tarkov_bg_obj, 0, 0);
-        lv_obj_set_style_bg_opa(tarkov_bg_obj, LV_OPA_TRANSP, LV_PART_MAIN);
-        lv_obj_set_style_border_opa(tarkov_bg_obj, LV_OPA_TRANSP, LV_PART_MAIN);
-        lv_obj_lower(tarkov_bg_obj);
-        lv_obj_add_event_cb(tarkov_bg_obj, tarkov_draw_event, LV_EVENT_DRAW_MAIN, NULL);
-    }
-
+    lv_obj_add_event_cb(screen, tarkov_draw_event, LV_EVENT_DRAW_MAIN, NULL);
     lv_obj_set_style_bg_opa(screen, LV_OPA_TRANSP, LV_PART_MAIN);
     lv_obj_set_style_border_opa(screen, LV_OPA_TRANSP, LV_PART_MAIN);
-    set_children_transparent(screen);
     lv_obj_invalidate(screen);
 }
 
