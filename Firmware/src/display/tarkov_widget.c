@@ -15,7 +15,7 @@ static void tarkov_draw_event(lv_event_t *e)
     lv_draw_ctx_t *draw_ctx = lv_event_get_draw_ctx(e);
     lv_coord_t buf_stride = lv_area_get_width(draw_ctx->buf_area);
     lv_color_t *buf = (lv_color_t *)draw_ctx->buf;
-    lv_color_t white = LV_COLOR_WHITE;
+    lv_color_t white = lv_color_make(0xFF, 0xFF, 0xFF);
 
     const lv_area_t *clip = draw_ctx->clip_area;
     lv_coord_t y0 = clip->y1;
