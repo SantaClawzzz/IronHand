@@ -32,6 +32,34 @@ static void tarkov_draw_event(lv_event_t *e)
     }
 }
 
+static void tarkov_apply(struct k_work *work)
+{
+    lv_obj_t *screen = lv_scr_act();
+    if (!screen) {
+        return;
+    }
+
+    lv_obj_add_event_cb(screen, tarkov_draw_event, LV_EVENT_DRAW_MAIN, NULL);
+
+    uint32_t cnt = lv_obj_get_child_cnt(screen);
+    for (uint32_t i = 0; i < cnt; i++) {
+        lv_obj_t *child = lv_obj_get_child(screen, i);
+        lv_obj_set_style_bg_opa(child, LV_OPA_TRANSP, 0);
+    }
+
+    lv_obj_invalidate(screen);
+}
+
+static K_WORK_DELAYABLE_DEFINE(tarkov_work, tarkov_apply);
+
+static int tarkov_widget_init(void)
+{
+    k_work_schedule(&tarkov_work, K_MSEC(2000));
+    return 0;
+}
+
+SYS_INIT(tarkov_widget_init, APPLICATION, 90);
+
 lv_obj_t *zmk_display_status_screen(void)
 {
     lv_obj_t *screen = lv_obj_create(NULL);
@@ -42,7 +70,7 @@ lv_obj_t *zmk_display_status_screen(void)
     zmk_widget_output_status_init(&output_widget, screen);
     zmk_widget_layer_status_init(&layer_widget, screen);
 
-    const lv_font_t *font = lv_theme_get_font_small(screen);
+    const lv_font_t *font = lv_theme_get_font_small(lv_scr_act());
     if (font) {
         lv_obj_set_style_text_font(zmk_widget_output_status_obj(&output_widget),
                                    font,
