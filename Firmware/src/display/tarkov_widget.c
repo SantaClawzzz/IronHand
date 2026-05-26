@@ -4,9 +4,12 @@
 
 #include "tarkov_img_data.h"
 
+static lv_obj_t *tarkov_screen;
+
 static void tarkov_draw_event(lv_event_t *e)
 {
-    if (lv_event_get_code(e) != LV_EVENT_DRAW_MAIN) {
+    lv_event_code_t code = lv_event_get_code(e);
+    if (code != LV_EVENT_DRAW_MAIN && code != LV_EVENT_DRAW_POST) {
         return;
     }
 
@@ -29,6 +32,10 @@ static void tarkov_draw_event(lv_event_t *e)
         int buf_row = (y - draw_ctx->buf_area->y1) * buf_stride;
         for (lv_coord_t x = x0; x <= x1; x++) {
             int img_x = x - obj_coords.x1;
+            if (img_x < 0 || img_x >= TARKOV_IMG_W || img_y < 0 || img_y >= TARKOV_IMG_H) {
+                continue;
+            }
+
             int img_off = (img_y * TARKOV_IMG_W + img_x) * 2;
             int buf_idx = buf_row + (x - draw_ctx->buf_area->x1);
             if (img_off + 1 >= (int)sizeof(tarkov_img_data)) {
@@ -52,13 +59,20 @@ static void tarkov_apply(struct k_work *work)
 
     lv_obj_t *screen = lv_scr_act();
     if (!screen) {
+        k_work_schedule(&tarkov_work, K_MSEC(1000));
         return;
     }
 
-    lv_obj_add_event_cb(screen, tarkov_draw_event, LV_EVENT_DRAW_MAIN, NULL);
+    if (screen != tarkov_screen) {
+        tarkov_screen = screen;
+        lv_obj_add_event_cb(screen, tarkov_draw_event, LV_EVENT_DRAW_MAIN, NULL);
+        lv_obj_add_event_cb(screen, tarkov_draw_event, LV_EVENT_DRAW_POST, NULL);
+    }
+
     lv_obj_set_style_bg_opa(screen, LV_OPA_TRANSP, LV_PART_MAIN);
     lv_obj_set_style_border_opa(screen, LV_OPA_TRANSP, LV_PART_MAIN);
     lv_obj_invalidate(screen);
+    k_work_schedule(&tarkov_work, K_MSEC(1000));
 }
 
 static K_WORK_DELAYABLE_DEFINE(tarkov_work, tarkov_apply);
