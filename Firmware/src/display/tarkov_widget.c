@@ -4,6 +4,18 @@
 
 #include "tarkov_img_data.h"
 
+static const lv_img_dsc_t tarkov_img_dsc = {
+    .header = {
+        .cf          = LV_IMG_CF_TRUE_COLOR,
+        .always_zero = 0,
+        .reserved    = 0,
+        .w           = TARKOV_IMG_W,
+        .h           = TARKOV_IMG_H,
+    },
+    .data_size = TARKOV_IMG_W * TARKOV_IMG_H * 2,
+    .data      = tarkov_img_data,
+};
+
 static lv_obj_t *tarkov_screen;
 static lv_style_t tarkov_bg_style;
 static bool tarkov_bg_style_initialized;
