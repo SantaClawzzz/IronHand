@@ -18,17 +18,37 @@ static const lv_img_dsc_t tarkov_img_dsc = {
 
 static lv_style_t tarkov_bg_style;
 
-static int tarkov_widget_init(void)
+static void set_children_transparent(lv_obj_t *screen)
 {
+    uint32_t child_count = lv_obj_get_child_cnt(screen);
+    for (uint32_t i = 0; i < child_count; i++) {
+        lv_obj_t *child = lv_obj_get_child(screen, i);
+        lv_obj_set_style_bg_opa(child, LV_OPA_TRANSP, LV_PART_MAIN);
+        lv_obj_set_style_border_opa(child, LV_OPA_TRANSP, LV_PART_MAIN);
+    }
+}
+
+static void tarkov_apply(struct k_work *work)
+{
+    ARG_UNUSED(work);
+
     lv_obj_t *screen = lv_scr_act();
     if (!screen) {
-        return 0;
+        return;
     }
 
     lv_style_init(&tarkov_bg_style);
     lv_style_set_bg_img_src(&tarkov_bg_style, &tarkov_img_dsc);
     lv_obj_add_style(screen, &tarkov_bg_style, 0);
+    set_children_transparent(screen);
+    lv_obj_invalidate(screen);
+}
 
+static K_WORK_DELAYABLE_DEFINE(tarkov_work, tarkov_apply);
+
+static int tarkov_widget_init(void)
+{
+    k_work_schedule(&tarkov_work, K_MSEC(2000));
     return 0;
 }
 
