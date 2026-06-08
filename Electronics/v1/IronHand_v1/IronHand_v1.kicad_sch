@@ -5,590 +5,6 @@
 	(uuid "b8d579d2-27f2-42eb-81dd-aa99a1fe3fb3")
 	(paper "A3")
 	(lib_symbols
-		(symbol "AA:MCP23S17-E_SO"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 3.302 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" "MCP23S17-E_SO"
-				(at 0 1.016 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" "AA:SOIC127P1030X265-28N"
-				(at 11.43 -51.816 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "MCP23S17-E_SO_0_0"
-				(rectangle
-					(start 0 0)
-					(end 25.4 -48.26)
-					(stroke
-						(width 0.41)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin bidirectional line
-					(at 30.48 -27.94 180)
-					(length 5.08)
-					(name "GPB0"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 30.48 -30.48 180)
-					(length 5.08)
-					(name "GPB1"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 30.48 -33.02 180)
-					(length 5.08)
-					(name "GPB2"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 30.48 -35.56 180)
-					(length 5.08)
-					(name "GPB3"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 30.48 -38.1 180)
-					(length 5.08)
-					(name "GPB4"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 30.48 -40.64 180)
-					(length 5.08)
-					(name "GPB5"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 30.48 -43.18 180)
-					(length 5.08)
-					(name "GPB6"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 30.48 -45.72 180)
-					(length 5.08)
-					(name "GPB7"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -5.08 -11.43 0)
-					(length 5.08)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -5.08 -3.81 0)
-					(length 5.08)
-					(name "VSS"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -5.08 -17.78 0)
-					(length 5.08)
-					(name "~{CS}"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -5.08 -22.86 0)
-					(length 5.08)
-					(name "SCK"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -5.08 -25.4 0)
-					(length 5.08)
-					(name "SI"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at -5.08 -27.94 0)
-					(length 5.08)
-					(name "SO"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -5.08 -40.64 0)
-					(length 5.08)
-					(name "A0"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -5.08 -43.18 0)
-					(length 5.08)
-					(name "A1"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -5.08 -45.72 0)
-					(length 5.08)
-					(name "A2"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "17"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -5.08 -20.32 0)
-					(length 5.08)
-					(name "~{RESET}"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "18"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at -5.08 -35.56 0)
-					(length 5.08)
-					(name "INTB"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "19"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at -5.08 -33.02 0)
-					(length 5.08)
-					(name "INTA"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "20"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 30.48 -3.81 180)
-					(length 5.08)
-					(name "GPA0"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "21"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 30.48 -6.35 180)
-					(length 5.08)
-					(name "GPA1"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "22"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 30.48 -8.89 180)
-					(length 5.08)
-					(name "GPA2"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "23"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 30.48 -11.43 180)
-					(length 5.08)
-					(name "GPA3"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "24"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 30.48 -13.97 180)
-					(length 5.08)
-					(name "GPA4"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "25"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 30.48 -16.51 180)
-					(length 5.08)
-					(name "GPA5"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "26"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 30.48 -19.05 180)
-					(length 5.08)
-					(name "GPA6"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "27"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 30.48 -21.59 180)
-					(length 5.08)
-					(name "GPA7"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "28"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Connector:Conn_01x02_Socket"
 			(pin_names
 				(offset 1.016)
@@ -2228,6 +1644,588 @@
 						(effects
 							(font
 								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "IronHandSymbols:MCP23S17-E_SO"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U1"
+				(at 12.7 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MCP23S17-E_SO"
+				(at 12.7 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "IronHand_Components:SOIC127P1030X265-28N"
+				(at 11.43 -51.816 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MCP23S17-E_SO_0_0"
+				(rectangle
+					(start 0 0)
+					(end 25.4 -48.26)
+					(stroke
+						(width 0.41)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin bidirectional line
+					(at 30.48 -27.94 180)
+					(length 5.08)
+					(name "GPB0"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 30.48 -30.48 180)
+					(length 5.08)
+					(name "GPB1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 30.48 -33.02 180)
+					(length 5.08)
+					(name "GPB2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 30.48 -35.56 180)
+					(length 5.08)
+					(name "GPB3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 30.48 -38.1 180)
+					(length 5.08)
+					(name "GPB4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 30.48 -40.64 180)
+					(length 5.08)
+					(name "GPB5"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 30.48 -43.18 180)
+					(length 5.08)
+					(name "GPB6"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 30.48 -45.72 180)
+					(length 5.08)
+					(name "GPB7"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -5.08 -3.81 0)
+					(length 5.08)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -5.08 -10.16 0)
+					(length 5.08)
+					(name "VSS"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 -17.78 0)
+					(length 5.08)
+					(name "~{CS}"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 -22.86 0)
+					(length 5.08)
+					(name "SCK"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 -25.4 0)
+					(length 5.08)
+					(name "SI"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -5.08 -27.94 0)
+					(length 5.08)
+					(name "SO"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 -40.64 0)
+					(length 5.08)
+					(name "A0"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 -43.18 0)
+					(length 5.08)
+					(name "A1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 -45.72 0)
+					(length 5.08)
+					(name "A2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 -20.32 0)
+					(length 5.08)
+					(name "~{RESET}"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -5.08 -35.56 0)
+					(length 5.08)
+					(name "INTB"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -5.08 -33.02 0)
+					(length 5.08)
+					(name "INTA"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 30.48 -3.81 180)
+					(length 5.08)
+					(name "GPA0"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 30.48 -6.35 180)
+					(length 5.08)
+					(name "GPA1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 30.48 -8.89 180)
+					(length 5.08)
+					(name "GPA2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 30.48 -11.43 180)
+					(length 5.08)
+					(name "GPA3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 30.48 -13.97 180)
+					(length 5.08)
+					(name "GPA4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "25"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 30.48 -16.51 180)
+					(length 5.08)
+					(name "GPA5"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "26"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 30.48 -19.05 180)
+					(length 5.08)
+					(name "GPA6"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "27"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 30.48 -21.59 180)
+					(length 5.08)
+					(name "GPA7"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.016 1.016)
 							)
 						)
 					)
@@ -8582,16 +8580,6 @@
 	)
 	(wire
 		(pts
-			(xy 20.32 214.63) (xy 35.56 214.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2f2a8534-47a7-445b-bd87-9ecd1d5dc92e")
-	)
-	(wire
-		(pts
 			(xy 60.96 265.43) (xy 60.96 267.97)
 		)
 		(stroke
@@ -12212,16 +12200,6 @@
 	)
 	(wire
 		(pts
-			(xy 20.32 220.98) (xy 20.32 214.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "add0421e-b9ab-4b2e-a0ab-1e697fa739f6")
-	)
-	(wire
-		(pts
 			(xy 93.98 220.98) (xy 93.98 236.22)
 		)
 		(stroke
@@ -12612,6 +12590,16 @@
 	)
 	(wire
 		(pts
+			(xy 21.59 223.52) (xy 21.59 220.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd9bf797-014d-4dc3-8e84-62fe4dcad96b")
+	)
+	(wire
+		(pts
 			(xy 34.29 128.27) (xy 34.29 147.32)
 		)
 		(stroke
@@ -12832,7 +12820,7 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 207.01) (xy 30.48 222.25)
+			(xy 21.59 208.28) (xy 21.59 214.63)
 		)
 		(stroke
 			(width 0)
@@ -13952,6 +13940,16 @@
 	)
 	(wire
 		(pts
+			(xy 21.59 220.98) (xy 35.56 220.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea58e69b-4fad-4984-8ac6-ed1321b38143")
+	)
+	(wire
+		(pts
 			(xy 234.95 262.89) (xy 219.71 262.89)
 		)
 		(stroke
@@ -14352,7 +14350,7 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 222.25) (xy 35.56 222.25)
+			(xy 21.59 214.63) (xy 35.56 214.63)
 		)
 		(stroke
 			(width 0)
@@ -15525,7 +15523,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 39.37 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -15630,7 +15628,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 39.37 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -15819,7 +15817,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 97.79 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -15986,7 +15984,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 67.31 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -16231,7 +16229,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 107.95 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -16314,7 +16312,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 140.97 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -16419,7 +16417,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 49.53 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -16524,7 +16522,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 90.17 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -16626,7 +16624,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 77.47 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -16962,7 +16960,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 87.63 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -17042,7 +17040,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 77.47 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -17125,7 +17123,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 69.85 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -17230,7 +17228,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 69.85 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -17504,7 +17502,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 140.97 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -17783,7 +17781,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 151.13 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -17967,7 +17965,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 26.67 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -18047,7 +18045,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 46.99 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -18130,7 +18128,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 110.49 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -18232,7 +18230,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 138.43 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -18315,7 +18313,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 39.37 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -18591,7 +18589,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 148.59 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -18756,7 +18754,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 110.49 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -18943,7 +18941,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 59.69 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -19048,7 +19046,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 80.01 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -19153,7 +19151,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 80.01 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -19345,7 +19343,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 90.17 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -19450,7 +19448,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 59.69 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -19555,7 +19553,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 69.85 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -19659,7 +19657,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Stabilizer:Stabilizer_MX_2.00u"
+		(property "Footprint" "IronHand_Components:Stabilizer_MX_2.00u"
 			(at 283.21 276.86 0)
 			(hide yes)
 			(show_name no)
@@ -19733,7 +19731,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 87.63 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -19903,7 +19901,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 120.65 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -20087,7 +20085,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 57.15 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -20426,7 +20424,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 90.17 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -20528,7 +20526,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 67.31 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -20611,7 +20609,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 100.33 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -20800,7 +20798,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 97.79 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -20880,7 +20878,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.75u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.75u"
 			(at 138.43 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -21128,7 +21126,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 29.21 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -21230,7 +21228,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 26.67 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -21310,7 +21308,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 87.63 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -21472,7 +21470,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 67.31 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -21555,7 +21553,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 130.81 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -21817,7 +21815,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 138.43 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -21987,7 +21985,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 151.13 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -22170,7 +22168,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 140.97 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -22275,7 +22273,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 140.97 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -22379,7 +22377,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Stabilizer:Stabilizer_MX_2.00u"
+		(property "Footprint" "IronHand_Components:Stabilizer_MX_2.00u"
 			(at 257.81 269.24 0)
 			(hide yes)
 			(show_name no)
@@ -22622,7 +22620,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 77.47 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -22702,7 +22700,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 97.79 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -22869,7 +22867,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 67.31 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -22949,7 +22947,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 118.11 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -23111,7 +23109,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 148.59 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -23782,7 +23780,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 120.65 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -23962,7 +23960,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 97.79 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -24045,7 +24043,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 90.17 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -24147,7 +24145,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 26.67 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -24227,7 +24225,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 148.59 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -24721,7 +24719,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 130.81 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -24826,7 +24824,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 39.37 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -25015,7 +25013,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 107.95 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -25098,7 +25096,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 29.21 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -25543,7 +25541,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 107.95 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -25626,7 +25624,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 80.01 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -25728,7 +25726,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.25u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.25u"
 			(at 67.31 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -25808,7 +25806,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 118.11 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -25888,7 +25886,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 97.79 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -26055,7 +26053,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 87.63 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -26225,7 +26223,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 49.53 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -26499,7 +26497,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 29.21 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -26604,7 +26602,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 39.37 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -26787,7 +26785,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 29.21 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -26970,7 +26968,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 140.97 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -27502,7 +27500,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 36.83 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -27585,7 +27583,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 120.65 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -27738,6 +27736,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 21.59 223.52 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "516e46be-c4b7-4187-8f12-c57c3b941aa5")
+		(property "Reference" "#PWR013"
+			(at 21.59 229.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 21.59 228.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 21.59 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 21.59 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 21.59 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b3fade7d-5db5-481e-b84c-05fb80b93fab")
+		)
+		(instances
+			(project "IronHand_v1"
+				(path "/b8d579d2-27f2-42eb-81dd-aa99a1fe3fb3"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Switch:SW_Push_45deg")
 		(at 87.63 130.81 0)
 		(unit 1)
@@ -27769,7 +27845,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_6.25u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_6.25u"
 			(at 87.63 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -27939,7 +28015,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 80.01 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -28044,7 +28120,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 110.49 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -28149,7 +28225,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 80.01 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -28251,7 +28327,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 107.95 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -28331,7 +28407,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.25u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.25u"
 			(at 46.99 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -28414,7 +28490,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 39.37 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -28607,7 +28683,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 46.99 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -28690,7 +28766,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 39.37 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -28792,7 +28868,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.25u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.25u"
 			(at 46.99 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -28872,7 +28948,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 26.67 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -28955,7 +29031,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 69.85 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -29114,7 +29190,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 30.48 207.01 0)
+		(at 21.59 208.28 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -29125,7 +29201,7 @@
 		(fields_autoplaced yes)
 		(uuid "5a91535e-d27d-4f24-96c6-eaf46e7b0f93")
 		(property "Reference" "#PWR012"
-			(at 30.48 210.82 0)
+			(at 21.59 212.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29136,7 +29212,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 30.48 201.93 0)
+			(at 21.59 203.2 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -29146,7 +29222,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 30.48 207.01 0)
+			(at 21.59 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29157,7 +29233,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 30.48 207.01 0)
+			(at 21.59 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29168,7 +29244,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 30.48 207.01 0)
+			(at 21.59 208.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29222,7 +29298,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_2.75u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_2.75u"
 			(at 128.27 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -29562,7 +29638,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 59.69 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -29667,7 +29743,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 80.01 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -29937,7 +30013,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 49.53 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -30213,7 +30289,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.25u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.25u"
 			(at 118.11 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -30296,7 +30372,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 130.81 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -30398,7 +30474,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 148.59 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -30478,7 +30554,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 46.99 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -30817,7 +30893,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 29.21 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -30919,7 +30995,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 107.95 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -30999,7 +31075,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 67.31 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -31598,7 +31674,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 36.83 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -31678,7 +31754,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 148.59 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -31845,7 +31921,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 87.63 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -31925,7 +32001,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.25u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.25u"
 			(at 118.11 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -32177,7 +32253,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 110.49 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -32360,7 +32436,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Stabilizer:Stabilizer_MX_2.00u"
+		(property "Footprint" "IronHand_Components:Stabilizer_MX_2.00u"
 			(at 283.21 269.24 0)
 			(hide yes)
 			(show_name no)
@@ -32862,7 +32938,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 100.33 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -33049,7 +33125,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 49.53 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -33151,7 +33227,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 87.63 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -33234,7 +33310,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 120.65 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -33336,7 +33412,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 118.11 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -33506,7 +33582,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 100.33 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -33611,7 +33687,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 90.17 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -33800,7 +33876,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_2.00u_90deg"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_2.00u_90deg"
 			(at 46.99 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -33883,7 +33959,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 151.13 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -33988,7 +34064,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 59.69 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -34090,7 +34166,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 26.67 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -34173,7 +34249,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 29.21 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -34525,7 +34601,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 110.49 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -34630,7 +34706,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 49.53 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -34732,7 +34808,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 138.43 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -34815,7 +34891,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 140.97 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -34995,7 +35071,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 57.15 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -35747,7 +35823,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 97.79 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -35830,7 +35906,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 100.33 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -36104,7 +36180,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 29.21 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -36380,7 +36456,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 107.95 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -36544,7 +36620,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Stabilizer:Stabilizer_MX_2.00u"
+		(property "Footprint" "IronHand_Components:Stabilizer_MX_2.00u"
 			(at 257.81 276.86 0)
 			(hide yes)
 			(show_name no)
@@ -36705,7 +36781,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 118.11 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -36785,7 +36861,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 57.15 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -36955,7 +37031,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 151.13 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -37147,7 +37223,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 140.97 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -37252,7 +37328,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 69.85 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -37357,7 +37433,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 49.53 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -37544,7 +37620,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 100.33 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -37809,7 +37885,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 130.81 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -37998,7 +38074,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 67.31 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -38167,7 +38243,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Stabilizer:Stabilizer_MX_2.00u"
+		(property "Footprint" "IronHand_Components:Stabilizer_MX_2.00u"
 			(at 267.97 285.75 0)
 			(hide yes)
 			(show_name no)
@@ -38244,7 +38320,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 80.01 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -38505,7 +38581,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 59.69 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -38781,7 +38857,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 118.11 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -39024,7 +39100,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 100.33 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -39126,7 +39202,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 87.63 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -39621,7 +39697,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 57.15 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -39781,7 +39857,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Stabilizer:Stabilizer_MX_6.25u"
+		(property "Footprint" "IronHand_Components:Stabilizer_MX_6.25u"
 			(at 283.21 261.62 0)
 			(hide yes)
 			(show_name no)
@@ -39855,7 +39931,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 36.83 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -40255,7 +40331,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 90.17 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -40438,7 +40514,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 130.81 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -40709,7 +40785,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 26.67 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -40961,7 +41037,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 59.69 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -41237,7 +41313,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 97.79 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -41320,7 +41396,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 130.81 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -41509,7 +41585,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 128.27 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -41589,7 +41665,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 46.99 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -41672,7 +41748,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 90.17 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -41943,7 +42019,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 36.83 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -42026,7 +42102,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 39.37 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -42387,7 +42463,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 120.65 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -42492,7 +42568,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 110.49 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -42597,7 +42673,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 151.13 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -43106,7 +43182,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 128.27 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -43351,7 +43427,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 57.15 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -43518,7 +43594,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 57.15 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -43680,7 +43756,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 128.27 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -43937,7 +44013,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 100.33 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -44042,7 +44118,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 120.65 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -44229,7 +44305,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 130.81 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -44333,7 +44409,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Stabilizer:Stabilizer_MX_2.00u"
+		(property "Footprint" "IronHand_Components:Stabilizer_MX_2.00u"
 			(at 257.81 261.62 0)
 			(hide yes)
 			(show_name no)
@@ -44575,7 +44651,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_MCU:Nice_Nano_V2"
+		(property "Footprint" "IronHand_Components:Nice_Nano_V2"
 			(at 213.36 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -44821,7 +44897,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 120.65 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -45005,7 +45081,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_ISOEnter"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_ISOEnter"
 			(at 138.43 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -45088,7 +45164,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 90.17 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -45190,7 +45266,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_2.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_2.00u"
 			(at 36.83 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -45273,7 +45349,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 80.01 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -45375,7 +45451,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 107.95 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -45542,7 +45618,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 77.47 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -45709,7 +45785,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 77.47 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -45792,7 +45868,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 151.13 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -46063,7 +46139,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 57.15 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -46224,7 +46300,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 140.97 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -46413,7 +46489,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.25u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.25u"
 			(at 67.31 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -46493,7 +46569,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 36.83 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -46573,7 +46649,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 36.83 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -46731,7 +46807,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 57.15 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -46811,7 +46887,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 77.47 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -46860,7 +46936,7 @@
 		)
 	)
 	(symbol
-		(lib_id "AA:MCP23S17-E_SO")
+		(lib_id "IronHandSymbols:MCP23S17-E_SO")
 		(at 40.64 210.82 0)
 		(unit 1)
 		(body_style 1)
@@ -46891,7 +46967,7 @@
 				)
 			)
 		)
-		(property "Footprint" "AA:SOIC127P1030X265-28N"
+		(property "Footprint" "IronHand_Components:SOIC127P1030X265-28N"
 			(at 52.07 262.636 0)
 			(hide yes)
 			(show_name no)
@@ -47140,7 +47216,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 69.85 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -47325,7 +47401,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 26.67 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -47826,7 +47902,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 77.47 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -47906,7 +47982,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_2.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_2.00u"
 			(at 36.83 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -47986,7 +48062,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 128.27 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -48153,7 +48229,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 26.67 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -48233,7 +48309,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 128.27 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -48483,7 +48559,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 120.65 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -48762,7 +48838,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 49.53 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -48942,7 +49018,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 148.59 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -49365,7 +49441,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_2.00u_90deg"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_2.00u_90deg"
 			(at 46.99 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -49448,7 +49524,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 49.53 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -49550,7 +49626,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 138.43 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -49633,7 +49709,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 100.33 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -49822,7 +49898,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 128.27 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -50074,7 +50150,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 110.49 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -50254,7 +50330,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 138.43 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -50334,7 +50410,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 128.27 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -50757,7 +50833,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 69.85 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -50859,7 +50935,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 148.59 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -50939,7 +51015,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 138.43 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -51182,7 +51258,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 69.85 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -51369,7 +51445,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 59.69 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -51719,7 +51795,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.25u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.25u"
 			(at 118.11 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -51799,7 +51875,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 97.79 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -51969,7 +52045,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 151.13 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -52074,7 +52150,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 29.21 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -52179,7 +52255,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 130.81 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -52250,84 +52326,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 20.32 220.98 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fe706a59-b331-4011-a724-d12754b38b97")
-		(property "Reference" "#PWR013"
-			(at 20.32 227.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 20.32 226.06 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 20.32 220.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 20.32 220.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 20.32 220.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c496005e-8e7a-4ab6-b807-1650151127e4")
-		)
-		(instances
-			(project "IronHand_v1"
-				(path "/b8d579d2-27f2-42eb-81dd-aa99a1fe3fb3"
-					(reference "#PWR013")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:D")
 		(at 59.69 119.38 90)
 		(unit 1)
@@ -52362,7 +52360,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
+		(property "Footprint" "IronHand_Components:Diode_DO-35"
 			(at 59.69 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -52464,7 +52462,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_Hotswap:Hotswap_MX_1.00u"
+		(property "Footprint" "IronHand_Components:Hotswap_MX_1.00u"
 			(at 77.47 38.1 0)
 			(hide yes)
 			(show_name no)

@@ -1,0 +1,205 @@
+(footprint "Stabilizer_MX_6.25u"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "MX PCB Stabilizer 6.25u")
+	(tags "MX Keyboard Stabilizer 6.25u Cutout")
+	(property "Reference" "REF**"
+		(at 0 -2 0)
+		(layer "F.SilkS")
+		(uuid "7abedec8-44a8-4928-bf88-a0cfb089814a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Stabilizer_MX_6.25u"
+		(at 0 2 0)
+		(layer "F.Fab")
+		(uuid "f6ba3e24-ed82-4476-8ca1-1f066e5a74ce")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "39e9eaf2-dcbf-44bf-936e-335bd7dcade6")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "340d53d7-bd6b-41cb-a10e-c7f49c2c85b0")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr exclude_from_pos_files exclude_from_bom)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2 0)
+		(end 2 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "9bdba837-2067-4787-a9fa-1e046bb5af6b")
+	)
+	(fp_line
+		(start 0 2)
+		(end 0 -2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "b34898c6-c322-4f43-9890-d87b01d6a7f5")
+	)
+	(fp_line
+		(start -53.375 -5.53)
+		(end -53.375 6.77)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Eco1.User")
+		(uuid "4f03ff95-2519-4948-b13e-a1bc51f7d1b0")
+	)
+	(fp_line
+		(start -53.375 6.77)
+		(end -46.625 6.77)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Eco1.User")
+		(uuid "4e0d5253-ebba-41c2-8b9e-0ecec6933d08")
+	)
+	(fp_line
+		(start -46.625 -5.53)
+		(end -53.375 -5.53)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Eco1.User")
+		(uuid "43eef0a8-1ed1-4104-bc11-9250a130ff36")
+	)
+	(fp_line
+		(start -46.625 6.77)
+		(end -46.625 -5.53)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Eco1.User")
+		(uuid "f8b2f308-b2be-4df2-9b76-7a0ddb0e0816")
+	)
+	(fp_line
+		(start 46.625 -5.53)
+		(end 46.625 6.77)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Eco1.User")
+		(uuid "24d1130c-7dec-4296-b34f-62b259914816")
+	)
+	(fp_line
+		(start 46.625 6.77)
+		(end 53.375 6.77)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Eco1.User")
+		(uuid "b3d601a7-fd1f-4760-8ec7-8717fed85470")
+	)
+	(fp_line
+		(start 53.375 -5.53)
+		(end 46.625 -5.53)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Eco1.User")
+		(uuid "4a705229-01c0-4a23-b231-5fabac46d03a")
+	)
+	(fp_line
+		(start 53.375 6.77)
+		(end 53.375 -5.53)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Eco1.User")
+		(uuid "d706819a-647f-4869-a1bc-ec72db8a3676")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "5c9aeb60-0da6-4609-beea-071f24defada")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" np_thru_hole circle
+		(at -50 -6.985)
+		(size 3.048 3.048)
+		(drill 3.048)
+		(layers "*.Cu" "*.Mask")
+		(uuid "f5aec7c6-b6fa-406e-8d0c-f6bd0b976fe6")
+	)
+	(pad "" np_thru_hole circle
+		(at -50 8.225)
+		(size 3.9878 3.9878)
+		(drill 3.9878)
+		(layers "*.Cu" "*.Mask")
+		(uuid "e923b1b3-7574-4a98-abe1-08df65ee97e8")
+	)
+	(pad "" np_thru_hole circle
+		(at 50 -6.985)
+		(size 3.048 3.048)
+		(drill 3.048)
+		(layers "*.Cu" "*.Mask")
+		(uuid "f469905c-cfe2-4f18-9347-afce659e2421")
+	)
+	(pad "" np_thru_hole circle
+		(at 50 8.225)
+		(size 3.9878 3.9878)
+		(drill 3.9878)
+		(layers "*.Cu" "*.Mask")
+		(uuid "e6fe2391-7f48-4f67-b2c0-4496dc2f2ab2")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Components/3DModels/Stabilizer_MX_6.25u.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
